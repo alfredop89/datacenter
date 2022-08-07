@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c1a11ecc8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <title>Datacenter</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+  <header class="w-100 d-flex align-items-center">
+      <nav class="container navbar navbar-expand-lg p-3">
+        <div>
+          <a class="navbar-brand" href="index.html"><img class="img-fluid logo dc-logo" src="./assets/img/g51510.png" alt=""></a>
+          <a class="navbar-brand" href="index.html"><img class="img-fluid logo dc-logo2" src="./assets/img/text1904-3.png" alt=""></a>
+        </div>
+        <div class="menubar">
+            <i class="fa-solid fa-bars navbar-toggle collapsed menubar-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false"></i>
+        </div>
+        <div class="collapse navbar-collapse row row-reverse" id="navbarNav">
+          <ul class="navbar-nav text-center d-flex justify-content-end my-4 text-light">
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#nosotros">Nosotros</a>
+            </li>
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#bloque-planes">Planes</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+
+<!-- BANNER -->
+    
+  <div class="dc-banner m-0 d-flex justify-content-center align-items-center">
+    <div class="container dc-banner-text col-12 text-light text-center mt-5">
+      <h1 class="mb-4" id="dc-banner-titulo">Bienvenido a Datacenter</h1>
+      <h3 id="dc-banner-subtitulo" class="mb-2">Tu servicio de almacenamiento</h3>
+      <p id="dc-banner-parrafo" class="mb-5">Te ofrecemos los mejores planes y servicios de almacenamiento de datos en la nube, seguridad y respaldo. Además, la mejor variedad en cuanto a velocidad para la transferencia de datos de tus archivos</p>
+      <h4 class="mb-4">DESDE 15$!/mes (I.V.A excluido)</h4>
+      <button class="dc-banner-button mt-3" id="dc-banner-button">EMPIEZA YA!</button>
+    </div>
+    <img class="banner-server img-fluid" src="assets/img/banner-server.png" alt="">
+  </div>
+  <div id="callbanner" class="p-3">
+    <div id="callbanner" class="container p-1">
+      <h5><i id="bannerphone" class="fa-solid fa-phone"></i> +123 557 89 74</h5>
+      <p>Llámanos si deseas consultar coualquier duda y acceder a mayor información de nuestros servicios</p>
+    </div>
+  </div>
+
+<!-- BLOQUE UNO -->
+
+  <div id="bloque-planes" class="container">
+    <div class="text-center mt-5">
+      <h4 class="mt-5">Escoge el plan que mejor se adapte a tus necesidades</h4>
+      <p>Encuentra la solución que más se adapte a tus necesidades y aprovecha todas las funciones incluidas.</p>
+    </div>
+  </div>
+
+  <div class="container my-4 p-3">
+    <div class="container d-flex row justify-content-around">
+      <div class="text-center col-12 col-md-4 my-3">
+        <h5><i id="check-icon" class="fa-solid fa-circle-check"></i> Disponibilidad garantizada</h5>
+      </div>
+      <div class="text-center col-12 col-md-4 my-3">
+        <h5><i id="check-icon" class="fa-solid fa-user-check"></i> Acceso compartido</h5>
+      </div>
+      <div class="text-center col-12 col-md-4 my-3">
+        <h5><i id="check-icon" class="fa-solid fa-shield-halved"></i> Seguridad y respaldo</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-4">
+
+    <div class="d-flex row justify-content-center align-items-center">
+      <div id="basico" class="plancard text-center p-3 col-12 col-md-6 m-4">
+        <h2 class="cardtitle p-3 mb-4">Básico</h2>
+        <h3 class="fs-2">15$/mes</h3>
+        <p>(Disponible para cancelar anualmente)</p>
+        <br>
+        <button id="cardbutton" class="dc-banner-button">Comprar</button>
+        <br>
+        <h6>100 GB de almacenamiento</h6>
+        <h6>1 Usuario incluido</h5>
+        <h6>Transferencia de datos básica</h6>
+        <h6 class="mb-4">Servicio de respaldo de datos</h6>
+      </div>
+
+      <div id="negocios" class="plancard text-center p-3 col-12 col-md-6 m-4">
+        <h2 class="cardtitle p-3 mb-4">Negocios</h2>
+        <h3 class="fs-2">35$/mes</h3>
+        <p>(Disponible para cancelar anualmente)</p>
+        <br>
+        <button id="cardbutton" class="dc-banner-button">Comprar</button>
+        <br>
+        <h6>300 GB de almacenamiento</h6>
+        <h6>25 Usuarios incluidos</h6>
+        <h6>Alta velocidad de transferencia</h6>
+        <h6 class="mb-4">Servicio de respaldo de datos</h6>
+      </div>
+
+      <div id="negocios" class="plancard text-center p-3 col-12 col-md-6 m-4">
+        <h2 class="cardtitle p-3 mb-4">Empresas</h2>
+        <h3 class="fs-2">45$/mes</h3>
+        <p>(Disponible para cancelar anualmente)</p>
+        <br>
+        <button id="cardbutton" class="dc-banner-button">Comprar</button>
+        <br>
+        <h6>750 GB de almacenamiento</h6>
+        <h6>50 Usuarios incluidos</h6>
+        <h6>Alta velocidad de transferencia</h6>
+        <h6 class="mb-4">Servicio de respaldo de datos</h6>
+      </div>
+
+      <div id="pro" class="plancard text-center text-light p-3 col-12 col-md-6 m-4">
+        <h2 id="cardtitle-pro" class="p-3 mb-4">Pro</h2>
+        <h3 class="fs-2">60$/mes</h3>
+        <p>(Disponible para cancelar anualmente)</p>
+        <br>
+        <button id="cardbutton-pro" class="dc-banner-button text-dark">Comprar</button>
+        <br>
+        <h6>2TB GB de almacenamiento</h6>
+        <h6>Usuarios ilimitados</h6>
+        <h6>Transferencia exclusiva</h6>
+        <h6 class="mb-4">Servicio de respaldo de datos</h6>
+      </div>
+      <div class="container text-center mt-5">
+        <p>*** Los precios incluidos en cada plan no incluyen I.V.A. del 21%, se aplican condiciones generales</p>
+      </div>
+    </div>
+  </div>
+
+<!-- BLOQUE DOS -->
+
+  <div id="servicios" class="w-100 d-flex justify-content-center">
+    <div class="container d-flex row p-3 w-100 justify-content-center">
+      <div class="text-center mb-3 fs-1">
+      <h2 class="my-4" id="serviciostitle">Nuestros servicios</h2>  
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-4 p-3">
+        <h3 class="mb-3" id="serviciostitle"><i id="check-icon" class="fa-solid fa-circle-dot"></i> Accesibilidad</h3>
+        <p>Descarga la aplicación en tu smartphone o tablet para tener siempre tus datos a mano: en la oficina, en la carretera o mientras estés con tus clientes. No importa si olvidas tu portátil en la oficina o te quedas sin batería a mitad de la presentación. Podrás acceder a tus datos en el cloud, desde cualquier navegador en cualquier dispositivo; lo que significa que todavía tendrás esas importantes cifras de ventas a mano, o simplemente podrás terminar tu presentación incluso en el ordenador de algún compañero.</p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 p-3">
+        <h3 class="mb-3" id="serviciostitle"><i id="check-icon" class="fa-solid fa-circle-dot"></i> Sincronización</h3>
+        <p>Datacenter te acompaña en tu jornada laboral. Elige qué archivos o carpetas deseas sincronizar con el cloud mediante un software para tu PC Windows o Mac. Cualquier cambio que hagas online o local se sincroniza automáticamente.</p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 p-3">
+        <h3 class="mb-3" id="serviciostitle"><i id="check-icon" class="fa-solid fa-circle-dot"></i> Colaboración</h3>
+        <p>Datacenter facilita el trabajo en equipo. Crea y administra cuentas individuales protegidas con contraseña para cada miembro del equipo. Comparte proyectos interna o externamente con solo un link y otorga a las personas derechos de solo lectura o la posibilidad de editar. Establece una fecha de vencimiento a los links compartidos, y limita el número de veces que se puedan descargar los datos. Así, por ejemplo, cuando termines de trabajar en Madrid, tu equipo en Valencia puede continuar trabajando sin problemas desde donde te quedaste.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-100 d-flex justify-content-center mb-5">
+    <div class="container d-flex row w-100 justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4 p-3">
+        <h3 class="mb-3" id="serviciostitle"><i id="check-icon" class="fa-solid fa-circle-dot"></i> Almacenamiento</h3>
+        <p>Organiza y accede a los archivos adjuntos del correo electrónico fácilmente. Transfiérelos cómodamente desde cualquier cuenta a tu almacenamiento en Datacenter. Simplemente reenvía el correo electrónico a Datacenter y este guardará todos los archivos adjuntos en la carpeta designada.</p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 p-3">
+        <h3 class="mb-3" id="serviciostitle"><i id="check-icon" class="fa-solid fa-circle-dot"></i> Digitalización</h3>
+        <p>No dependas de los documentos en papel. Escanéalos con la aplicación Datacenter y guárdalos en formato PDF con reconocimiento de texto. Es una forma sencilla de digitalizar cualquier cosa, desde las facturas hasta los contratos, para que sean más fáciles de encontrar cuando los necesites.</p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 p-3">
+        <h3 class="mb-3" id="serviciostitle"><i id="check-icon" class="fa-solid fa-circle-dot"></i> Protocolos</h3>
+        <p>Integra Datacenter en tus sistemas utilizando (S)FTP/FTPS, WebDAV, SMB/CIFS, rsync, SCP o Git. También puedes realizar una copia de seguridad automática de los datos de tu memoria conectada a la red (NAS). Datacenter es compatible con una serie de discos duros de red.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- BLOQUE TRES -->
+
+  <div class="bloquetres d-flex justify-content-center p-3">
+    <div class="container bloquetres d-flex row justify-content-center align-items-center text-light">
+      <div class="col-12 col-md-6 my-5">
+        <img class="img-fluid profilepic mb-5" src="./assets/img/profilepic.png" alt="">
+        <h3 class="my-4">Asesoría personalizada</h3>
+        <p>Consejos personalizados. Trucos para tu éxito online. Soporte técnico. Disponible por teléfono, chat e e-mail. Gratis para todos los clientes de Datacenter.</p>
+      </div>
+      <div class="col-12 col-md-6 my-5">
+        <h3 class="my-4">Lo mejor para ti</h3>
+        <p>Siempre estamos trabajando para mejorar nuestro servicio de atención al cliente, y es por eso que es un orgullo trabajar para ti. Gracias por confiar una vez más en nosotros. .</p>
+      </div>
+    </div>
+  </div>
+
+<!-- BLOQUE CUATRO -->
+
+<div id="nosotros" class="d-flex justify-content-center p-3">
+  <div class="container d-flex row justify-content-center align-items-center">
+    <div class="col-12 col-md-12 col-lg-6 my-5">
+      <h3 id="serviciostitle" class="my-4">Nosotros</h3>
+      <p>Datacenter es el aliado en soluciones de hosting y cloud para las pymes. Somos expertos en IaaS y ofrecemos un portafolio de soluciones para posicionar a las empresas online y para que éstas puedan trabajar en el mundo digital. Como la mayor empresa de hosting en Europa, contamos con más de 8 millones de contratos y alojamos más de 12 millones de dominios en nuestros centros de datos en todo el mundo.</p>
+      <p>Ofrecemos nuestros servicios a autónomos que dan sus primeros pasos online, a dueños de negocios crecientes, a grandes empresas y a socios que les estén ayudando a alcanzar sus metas. No importa si estás construyendo tu presencia online comprando un dominio, si estás creando tu página web, trasladando procesos de back-office a la cloud u organizando un cluster de contenedores, nuestro portafolio de productos te ofrece aplicaciones, servidores y servicios de primera.</p>
+      <p>Nuestros productos están diseñados para aportarte confianza y seguridad. La red de centros de datos que hemos creado proporcionan el mejor rendimiento y georredundancia. En Dtacenter nos enorgullecemos de la tradición en tecnología puntera, la política de privacidad sólida y una seguridad de datos integral.</p>
+    </div>
+    <div class="d-flex justify-content-center align-items-center col-12 col-md-6 my-5">
+      <img class="img-fluid serverpng" src="./assets/img/17_generated.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+
+  <div id="contacto" class="contacto d-flex justify-content-center align-items-center">
+    <div class="container p-5 col-12 col-md-8 col-lg-6">
+      <form class="d-flex row contactform p-4 col-12 col-md-6 col-lg-6">
+        <div class="mb-3">
+          <h3 class="mb-4">Contáctanos</h3>
+          <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">No compartiremos la información recibida.</div>
+        </div>
+        <div class="input-group">
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+        </div>
+        <div>
+          <button id="formbutton" type="submit">Enviar</button>
+        </div>     
+      </form>
+      
+    </div>
+  </div>
+
+<!-- FOOTER -->
+
+  <footer class="d-flex column justify-content-center align-items-center m-0 p-3 w-auto">
+    <div class="container d-flex row justify-content-center align-items-center p-3">
+      <div class="d-flex row text-center col-12 col-md-4 mb-5 justify-content-center align-items-center">
+        <a class="mb-4" href="#nosotros">Nosotros</a>
+        <a class="mb-4" href="#servicios">Servicios</a>
+        <a class="mb-4" href="#bloque-planes">Planes</a>
+        <a class="mb-4" href="#contacto">Contacto</a>
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center text-center col-12 col-md-4 mb-5">
+        <i id="footer-redes" class="mx-3 fa-brands fa-facebook-f"></i>
+        <i id="footer-redes" class="mx-3 fa-brands fa-twitter"></i>
+        <i id="footer-redes" class="mx-3 fa-brands fa-instagram"></i>
+        <i id="footer-redes" class="mx-3 fa-brands fa-whatsapp"></i>
+      </div>
+
+      <div class="d-flex row justify-content-center align-items-center col-12 col-md-4 mb-5 text-light">
+        <img class="img-fluid dc-footer mb-4" src="./assets/img/text1904-3.png" alt="">
+        <p><i class="fa-solid fa-phone"></i> +123 557 89 74</p>
+        <p><i class="fa-solid fa-envelope"></i> infodc@datacenter.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Dirección falsa, a la vista de la montaña, Madrid, España.</p>
+      </div>
+      <div class="text-light text-center">
+        <p><img class="img-fluid faviconfooter mx-3" src="./assets/img/favicon (1).png" alt="">Sitio web creado por Alfredo Pérez. 2022</p>
+      </div>
+    </div>
+  </footer>
+
+<!--SCRIPTS-->
+
+  <script src="JS/datacenter.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+</html>

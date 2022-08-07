@@ -1,0 +1,269 @@
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+
+/* HEADER */
+
+header{
+    height: auto;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.581);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.64);
+    transition: all 0.8s ease-in-out;
+    z-index: 10;
+}
+.menubar-icon{
+    color: white;
+}
+.navbar-item, a {
+    color: white !important;
+}
+.dc-logo{
+    height: 30px;
+}
+.dc-logo2{
+    height: 30px;
+}
+
+
+
+
+/* BANNER */
+
+.dc-banner{
+    position: relative;
+    background-image: url(../assets/img/banner-fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+    width: 100% !important;
+    border-bottom: 70px solid rgb(27, 27, 68);
+}
+.dc-banner, h1{
+    font-weight: 600;
+}
+.dc-banner-button{
+    background-color: rgb(6, 30, 91);
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+.dc-banner-button:hover{
+    background-color: rgb(8, 20, 50);
+    transition: all 0.5s ease;
+}
+.dc-banner, p{
+    font-weight: 300;
+}
+.banner-server{
+    height: 450px;
+    position: absolute;
+    /* transform: translateX(100%); */
+    transform: translateY(70%);
+    right: 0%;
+}
+#callbanner{
+    background-color: rgb(6, 30, 91);
+    color: white;
+}
+#bannerphone{
+    color: green;
+}
+
+
+
+
+/* PLANES */
+
+
+#check-icon{
+    color: green;
+}
+h4{
+    font-size: 30px;
+    font-weight: 500;
+}
+.plancard{
+    width: auto;
+    border: 1px solid rgba(0, 0, 0, 0.131);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.269);
+    transition: ease 0.5s all;
+}
+#cardbutton{
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+.cardtitle{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+}
+#basico{
+    background-color: rgba(6, 30, 91, 0.13);
+}
+#negocios{
+    background-color: rgba(6, 30, 91, 0.13);
+}
+#pro{
+    background-color: rgb(27, 27, 68);
+}
+#cardtitle-pro{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.145);
+}
+#cardbutton-pro{
+    border-radius: 15px;
+    margin-bottom: 40px;
+    background-color: rgb(255, 255, 255);
+}
+#cardbutton-pro:hover{
+    background-color: rgb(187, 187, 209);
+}
+
+
+
+
+/* BLOQUE DOS */
+
+#serviciostitle{
+    color: rgb(27, 27, 68);
+}
+
+
+/* BLOQUETRES */
+
+.bloquetres{
+    position: relative;
+    background-color: rgb(27, 27, 68) ;
+    margin-top: 100px;
+}
+.profilepic{
+    border-radius: 50%;
+    height: 250px;
+    position: absolute;
+    transform: translateY(-110%);
+    border: 5px solid white !important;
+}
+
+
+/* BLOQUE CUATRO */
+
+#nosotros{
+    border-bottom: 10px solid rgb(27, 27, 68);
+}
+
+
+/* CONTACTO */
+.contacto{
+    height: 600px;
+    background-image: url(../assets/img/banner-fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed ;
+}
+.contactform{
+    width: auto;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.651);
+}
+#formbutton{
+    background-color: rgb(27, 27, 68);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px !important;
+}
+
+
+
+
+/* FOOTER */
+
+footer{
+    background-color: rgb(27, 27, 68);
+}
+footer, a{
+    text-decoration: none;
+}
+#footer-redes{
+    color: white;
+    font-size: 30px;
+}
+.dc-footer{
+    height: 40px;
+    width: 100px;
+}
+.faviconfooter{
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 992px){
+    .dc-logo{
+        display: none;
+    }
+    header{
+        background-color: rgba(0, 0, 0, 0.948);
+        padding: 0;
+    }
+    .dc-banner{
+        height: 100vh;
+        border-bottom: 10px solid rgb(27, 27, 68);
+    }
+    .banner-server{
+        display: none;
+    }
+    #bloque-planes{
+        margin-top: 50px !important;
+    }
+    .serverpng{
+        display: none;
+    }
+
+}
+.menubar{
+    font-size: 30px;
+    color: rgb(48, 48, 48);
+}
+@media screen and (min-width: 992px){
+    header{
+        height: 80px;
+    }
+    .menubar{
+        display: none;
+    }
+    .dc-logo2{
+        display: none;
+    }
+}
