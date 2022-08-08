@@ -14,9 +14,6 @@ header{
     transition: all 0.8s ease-in-out;
     z-index: 10;
 }
-.bkg1{
-    background-color: rgb(190, 50, 50);
-}
 .menubar-icon{
     color: white;
 }
@@ -135,6 +132,7 @@ h4{
     position: fixed;
     inset: 0;
     z-index: 100;
+    opacity: 0;
     backdrop-filter: blur(8px);
     transition: all 0.5s ease-in-out !important;
     visibility: hidden;
@@ -153,6 +151,14 @@ h4{
     transition: all 1s ease-in-out !important;
     visibility: visible;
     
+}
+.modalbutton{
+    background-color: rgb(27, 27, 68);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px !important;
 }
 
 
