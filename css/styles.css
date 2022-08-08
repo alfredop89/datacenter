@@ -14,6 +14,9 @@ header{
     transition: all 0.8s ease-in-out;
     z-index: 10;
 }
+.colorchange{
+    background-color: rgb(6, 30, 91);
+}
 .menubar-icon{
     color: white;
 }
@@ -122,6 +125,35 @@ h4{
 #cardbutton-pro:hover{
     background-color: rgb(187, 187, 209);
 }
+
+/* MODAL */
+
+.dc-modal-container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.678);
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    backdrop-filter: blur(1px);
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+}
+.dc-modal{
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.dc-modal-png{
+    height: 60px;
+    width: 130px;
+}
+.open-dcmodal{
+    transition: all 0.5s ease-in-out;
+    visibility: visible;
+    
+}
+
 
 
 
