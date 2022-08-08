@@ -111,7 +111,7 @@ h4{
 #pro{
     background-color: rgb(27, 27, 68);
 }
-.cardtitle-pro{
+#cardtitle-pro{
     border-bottom: 1px solid rgba(255, 255, 255, 0.145);
 }
 #cardbutton-pro{
@@ -134,7 +134,7 @@ h4{
     z-index: 100;
     opacity: 0;
     backdrop-filter: blur(8px);
-    transition: all 0.5s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
     visibility: hidden;
 }
 .dc-modal{
@@ -149,7 +149,7 @@ h4{
 }
 .open-dcmodal{
     opacity: 1;
-    transition: all 1s ease-in-out !important;
+    transition: all 0.5s ease-in-out !important;
     visibility: visible;
     
 }
@@ -171,20 +171,27 @@ h4{
 #serviciostitle{
     color: rgb(27, 27, 68);
 }
+.serviciosbottom{
+    margin-bottom: 150px;
+}
+.asesoria-bloque{
+    margin-top: 150px;
+}
 
 
 /* BLOQUETRES */
 
 .bloquetres{
-    position: relative;
     background-color: rgb(27, 27, 68) ;
-    margin-top: 100px;
+}
+.pic-profile-container{
+    position: relative;
 }
 .profilepic{
+    position: absolute;
+    transform: translateY(0%);
     border-radius: 50%;
     height: 250px;
-    position: absolute;
-    transform: translateY(-110%);
     border: 5px solid white !important;
 }
 

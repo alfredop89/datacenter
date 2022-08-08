@@ -25,3 +25,7 @@ compra4.onclick = () => {
 closeModal.onclick = () =>{
     dcmodal.classList.remove("open-dcmodal")
 }
+
+window.addEventListener("click", () => {
+    dcmodal.classList.remove(".open-dcmodal")
+})
