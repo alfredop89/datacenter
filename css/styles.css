@@ -111,7 +111,7 @@ h4{
 #pro{
     background-color: rgb(27, 27, 68);
 }
-#cardtitle-pro{
+.cardtitle-pro{
     border-bottom: 1px solid rgba(255, 255, 255, 0.145);
 }
 #cardbutton-pro{
@@ -141,6 +141,7 @@ h4{
     background-color: white;
     border-radius: 10px;
     transition: all 0.5s ease-in-out !important;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.269);
 }
 .dc-modal-png{
     height: 60px;

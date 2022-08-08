@@ -1,9 +1,9 @@
 // MODAL
 const dcmodal = document.querySelector("#dc-modal-container")
-const compra1 = document.querySelector("#basico")
-const compra2 = document.querySelector("#negocios")
-const compra3 = document.querySelector("#empresas")
-const compra4 = document.querySelector("#pro")
+const compra1 = document.querySelector(".btnbasico")
+const compra2 = document.querySelector(".btnnegocios")
+const compra3 = document.querySelector(".btnempresas")
+const compra4 = document.querySelector(".btnpro")
 const closeModal = document.querySelector("#close-modal")
 
 compra1.onclick = () => {
