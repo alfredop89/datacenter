@@ -14,8 +14,8 @@ header{
     transition: all 0.8s ease-in-out;
     z-index: 10;
 }
-.colorchange{
-    background-color: rgb(0, 0, 0);
+.bkg1{
+    background-color: rgb(190, 50, 50);
 }
 .menubar-icon{
     color: white;

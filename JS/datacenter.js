@@ -1,19 +1,30 @@
+// MODAL
 const dcmodal = document.querySelector("#dc-modal-container")
-const comprar = document.querySelector("#cardbutton")
-    
+const compra1 = document.querySelector("#basico")
+const compra2 = document.querySelector("#negocios")
+const compra3 = document.querySelector("#empresas")
+const compra4 = document.querySelector("#pro")
+const closeModal = document.querySelector("#close-modal")
 
-
-
-const cerrarModal = document.querySelector("#close-modal")
-cerrarModal.addEventListener("click", () =>{
-    dcmodal.classList.remove("open-dcmodal")
-    window.addEventListener("click", () => {
-        dcmodal.onremove("open-modal")
-    })
-})
-
-
-comprar.addEventListener("click", () =>{
+compra1.onclick = () => {
     dcmodal.classList.add("open-dcmodal")
-})
+}
+
+compra2.onclick = () => {
+    dcmodal.classList.add("open-dcmodal")
+}
+
+compra3.onclick = () => {
+    dcmodal.classList.add("open-dcmodal")
+}
+
+compra4.onclick = () => {
+    dcmodal.classList.add("open-dcmodal")
+}
+
+closeModal.onclick = () =>{
+    dcmodal.classList.remove("open-dcmodal")
+}
+
+
 
