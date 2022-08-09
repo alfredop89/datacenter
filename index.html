@@ -152,25 +152,27 @@
   <!-- MODAL -->
 
   <div id="dc-modal-container" class="dc-modal-container d-flex justify-content-center align-items-center p-4">
-    <div id="dc-modal" class="dc-modal d-flex row p-4 col-12 col-md-6">
+    <form id="dc-modal" class="dc-modal d-flex row p-4 col-12 col-md-6">
       <div class="d-flex justify-content-center align-items-center mb-2">
         <img class="dc-modal-png" src="./assets/img/dcgray.png" alt="">
       </div>
       <h5 class="p-0 text-center my-2">Ingresa tus datos para realizar la compra</h5>
       <hr>
       <p class="p-0 m-0">Nombre</p>
-      <input class="mb-4" type="text" placeholder="Ingresa tu nombre" required>
+      <input id="modalnombre" class="mb-4" type="text" placeholder="Ingresa tu nombre" required>
       <p class="p-0 m-0">Apellido</p>
-      <input class="mb-4" type="text" placeholder="Ingresa tu Apellido" required>
+      <input id="modalapellido" class="mb-4" type="text" placeholder="Ingresa tu Apellido" required>
       <p class="p-0 m-0">Correo electrónico</p>
-      <input class="mb-4" type="email" placeholder="ejemplo@datacenter.com" required>
+      <input id="modalcorreo" class="mb-4" type="email" placeholder="ejemplo@datacenter.com" required>
       <p class="p-0 m-0">Tarjeta de crédito</p>
-      <input class="mb-4" type="email" placeholder="000-000-000000">
+      <input id="modaltdc" class="mb-4" type="number" placeholder="000-000-000000">
       <br>
-      <button class="modalbutton mt-5" id="modalbutton" type="submit">Comprar</button>
+      <button class="modalbutton mt-4" id="modalbutton" type="submit">Comprar</button>
       <a id="close-modal" class="text-dark" href="#bloque-planes">Cerrar ventana</a>
+    </form>
+    <div id="success-msg" class="dc-success text-light p-3">
+      <p class="fs-4 p-0 m-0"><i class="dc-succes-icon fa-solid fa-circle-check"></i> Compra realizada exitósamente</p>
     </div>
-    
   </div>
 
 <!-- BLOQUE DOS -->
@@ -255,21 +257,16 @@
         <div class="mb-3">
           <h3 class="mb-4">Contáctanos</h3>
           <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ejemplo@datacenter.com" required>
           <div id="emailHelp" class="form-text">No compartiremos la información recibida.</div>
         </div>
-        <div class="input-group">
+        <div class="input-group mb-4">
           <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Recordarme</label>
         </div>
         <div>
           <button id="formbutton" type="submit">Enviar</button>
         </div>     
       </form>
-      
     </div>
   </div>
 
