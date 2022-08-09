@@ -1,34 +1,25 @@
 // MODAL
-const dcmodal = document.querySelector("#dc-modal-container")
+const dcmodal = document.querySelector(".dc-modal-container")
+const modal = document.querySelector(".dc-modal")
+const modalbutton = document.querySelectorAll(".dc-banner-button")
+const cerrar = document.querySelector("#close-modal")
 
-// dcmodal,addEventListener("submit", (Event) =>{
-//     Event.preventDefault()
-// })
-dcmodal.addEventListener("click", () =>{
-    dcmodal.classList.remove(".open-dcmodal")
+modal.addEventListener("click", (e) =>{
+    e.stopPropagation
 })
-const compra1 = document.querySelector(".btnbasico")
-compra1.onclick = () => {
+
+modalbutton[1].addEventListener("click", () =>{
     dcmodal.classList.add("open-dcmodal")
-}
-const compra2 = document.querySelector(".btnnegocios")
-compra2.onclick = () => {
+})
+modalbutton[2].addEventListener("click", () =>{
     dcmodal.classList.add("open-dcmodal")
-}
-const compra3 = document.querySelector(".btnempresas")
-compra3.onclick = () => {
+})
+modalbutton[3].addEventListener("click", () =>{
     dcmodal.classList.add("open-dcmodal")
-}
-const compra4 = document.querySelector(".btnpro")
-compra4.onclick = () => {
+})
+modalbutton[4].addEventListener("click", () =>{
     dcmodal.classList.add("open-dcmodal")
-}
-const closeModal = document.querySelector("#close-modal")
-closeModal.onclick = () =>{
+})
+cerrar.onclick = () =>{
     dcmodal.classList.remove("open-dcmodal")
 }
-
-
-
-
-
