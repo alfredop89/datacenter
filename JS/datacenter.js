@@ -1,14 +1,10 @@
 // MODAL
 
-
-
 const dcmodal = document.querySelector(".dc-modal-container")
 const modal = document.querySelector(".dc-modal")
 const modalbutton = document.querySelectorAll(".dc-banner-button")
 const cerrar = document.querySelector("#close-modal")
-
 const inputs = document.querySelectorAll("input")
-console.log(inputs)
 
 
 modal.addEventListener("click", (e) =>{
@@ -32,38 +28,110 @@ for(let index = 1; index < 5; index++){
 // MODAL FORM
 
 const modalBoton = document.querySelector("#modalbutton")
-const success = document.querySelector("#success-msg")
-success.onmouseover = () => {
-    success.classList.remove("open-success")
-    dcmodal.classList.remove("open-dcmodal")
-}
-
-console.log(success)
 
 modalBoton.onclick = () =>{
-    console.log(user)
-    usuarioDatos.push(user)
-    console.log(usuarioDatos)
-    // dcmodal.classList.remove("open-dcmodal")
-    success.classList.add("open-success")
+    const userName = document.querySelector("#modalnombre")
+    const userApellido = document.querySelector("#modalapellido")
+    const userEmail = document.querySelector("#modalcorreo")
+    const userTdc = document.querySelector("#modaltdc")
     const modaltitulo = document.querySelector("#modaltitulo")
-    modaltitulo.innerText = "Felicidades " + userName.value + "!"
+
+    if( userName.value, userApellido.value, userEmail.value, userTdc.value  < 3){
+        modaltitulo.innerText = "Datos inválidos"
+        return
+    }
+    else{
+        modaltitulo.innerText = userName.value + ", " + "gracias por tu compra!"
+    }
+
+    const usuarioDatos = []
+    let user = {
+        nombre: userName.value,
+        apellido: userApellido.value,
+        correo: userEmail.value
+    }
+    usuarioDatos.push(user)
+    console.log(user)
+
+    const success = document.querySelector("#success-msg")
+    success.classList.add("open-success")
+
+    for(let index = 1; index < 5; index++){
+        modalbutton[index].addEventListener("click", (e) =>{
+            success.classList.remove("open-success")
+            modaltitulo.innerText = "Ingresa tus datos para realizar la compra"
+            e.stopPropagation()
+        })
+    }
+
+    modal.reset()
 }
 
-usuarioDatos= []
-
-const userName = document.querySelector("#modalnombre")
-const userApellido = document.querySelector("#modalapellido")
-const userEmail = document.querySelector("#modalcorreo")
-const userTdc = document.querySelector("#modaltdc")
-
-const user = ({
-    nombre: userName.value,
-    apellido: userApellido.value,
-    email: userEmail.value,
-    TDC: userTdc.value
-})
 
 
-// MENSAJE DE COMPRA
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // MENSAJE DE COMPRA
+
+// usuarioDatos= []
+
+// const userName = document.querySelector("#modalnombre")
+// const userApellido = document.querySelector("#modalapellido")
+// const userEmail = document.querySelector("#modalcorreo")
+// const userTdc = document.querySelector("#modaltdc")
+
+// const user = ({
+//     nombre: userName.value,
+//     apellido: userApellido.value,
+//     email: userEmail.value,
+//     TDC: userTdc.value
+// })
+
+// modalBoton.onclick = () =>{
+//     if(inputs.value < 3){
+//         modaltitulo.innerText = "Datos inválidos"
+//         return
+//     }
+
+//     console.log(user)
+//     usuarioDatos.push(user)
+//     console.log(usuarioDatos)
+
+
+
+
+//     success.classList.add("open-success")
+//     const modaltitulo = document.querySelector("#modaltitulo")
+//     modaltitulo.innerText = "Felicidades " + userName.value + "!"
+
+
+
+// }
