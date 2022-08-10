@@ -68,6 +68,32 @@ modalBoton.onclick = () =>{
 }
 
 
+// MODAL CONTACTO
+
+const formularioContacto = document.querySelector("#contactform")
+formularioContacto.onclick = (e) =>{
+    e.preventDefault()
+}
+
+const contactNombre = document.querySelector("#contactnombre")
+const contactEmail = document.querySelector("#contactemail")
+const send = document.querySelector(".contactenviar")
+
+send.onclick = () =>{
+    if(contactNombre.value, contactEmail.value < 5){
+        const contacttitulo = document.querySelector("#contacttitulo")
+        contacttitulo.innerText = "Datos inválidos"
+        return
+    }
+    else{
+        contacttitulo.innerText = contactNombre.value + "," + " tu mensaje ha sido enviado. Gracias por contactarnos"
+    }
+    formularioContacto.reset()
+}
+
+
+
+
 
 
 
