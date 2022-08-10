@@ -1,3 +1,23 @@
+// HEADER
+
+const header = document.querySelector("#dc-header")
+window.addEventListener("scroll", () => {
+    if(window.scrollY >= 50){
+        header.classList.add("color-bg")
+    }
+    else{
+        header.classList.remove("color-bg")
+    }
+})
+
+
+
+
+
+
+
+
+
 // MODAL
 
 const dcmodal = document.querySelector(".dc-modal-container")
@@ -5,8 +25,6 @@ const modal = document.querySelector(".dc-modal")
 const modalbutton = document.querySelectorAll(".dc-banner-button")
 const cerrar = document.querySelector("#close-modal")
 const inputs = document.querySelectorAll("input")
-
-
 modal.addEventListener("click", (e) =>{
     e.stopPropagation()
     e.preventDefault()
@@ -28,7 +46,6 @@ for(let index = 1; index < 5; index++){
 // MODAL FORM
 
 const modalBoton = document.querySelector("#modalbutton")
-
 modalBoton.onclick = () =>{
     const userName = document.querySelector("#modalnombre")
     const userApellido = document.querySelector("#modalapellido")
@@ -55,7 +72,6 @@ modalBoton.onclick = () =>{
 
     const success = document.querySelector("#success-msg")
     success.classList.add("open-success")
-
     for(let index = 1; index < 5; index++){
         modalbutton[index].addEventListener("click", (e) =>{
             success.classList.remove("open-success")
@@ -66,15 +82,12 @@ modalBoton.onclick = () =>{
 
     modal.reset()
 }
-
-
 // MODAL CONTACTO
 
 const formularioContacto = document.querySelector("#contactform")
 formularioContacto.onclick = (e) =>{
     e.preventDefault()
 }
-
 const contactNombre = document.querySelector("#contactnombre")
 const contactEmail = document.querySelector("#contactemail")
 const send = document.querySelector(".contactenviar")

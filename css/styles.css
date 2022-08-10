@@ -9,9 +9,9 @@ body{
 header{
     height: auto;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.581);
+    background-color: rgba(0, 0, 0, 0.816);
     border-bottom: 3px solid rgba(255, 255, 255, 0.64);
-    transition: all 0.8s ease-in-out;
+    transition: all 0.3s ease-in-out;
     z-index: 10;
 }
 .menubar-icon{
@@ -27,7 +27,7 @@ header{
     height: 30px;
 }
 .color-bg{
-    background-color: red;
+    background-color: rgb(6, 30, 91)
 }
 
 
@@ -55,6 +55,7 @@ header{
     color: white;
     padding: 15px;
     border-radius: 5px;
+    margin-top: 15px;
 }
 .dc-banner-button:hover{
     background-color: rgb(8, 20, 50);
