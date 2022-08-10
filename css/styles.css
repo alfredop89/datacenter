@@ -11,7 +11,7 @@ header{
     position: fixed;
     background-color: rgba(0, 0, 0, 0.816);
     border-bottom: 3px solid rgba(255, 255, 255, 0.64);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.8s ease-in-out;
     z-index: 10;
 }
 .menubar-icon{
@@ -272,21 +272,6 @@ footer, a{
 .faviconfooter{
     height: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

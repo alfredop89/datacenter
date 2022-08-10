@@ -10,14 +10,6 @@ window.addEventListener("scroll", () => {
     }
 })
 
-
-
-
-
-
-
-
-
 // MODAL
 
 const dcmodal = document.querySelector(".dc-modal-container")
