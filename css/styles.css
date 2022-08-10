@@ -179,6 +179,9 @@ h4{
     transition: all 0.8s ease-out !important;
     visibility: visible;
 }
+#close-modal{
+    cursor: pointer;
+}
 
 
 
