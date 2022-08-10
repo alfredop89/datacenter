@@ -238,6 +238,7 @@ h4{
     background-color: white;
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.651);
+    transition: all 0.3s ease-in-out !important;
 }
 #formbutton{
     background-color: rgb(27, 27, 68);
