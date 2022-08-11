@@ -45,6 +45,13 @@ modalBoton.onclick = () =>{
     const userTdc = document.querySelector("#modaltdc")
     const modaltitulo = document.querySelector("#modaltitulo")
 
+    const entrada = document.querySelectorAll(".entradas")
+    index = 0
+    for(index = 0; index < 3; index++)
+    entrada[index].addEventListener("click", () =>{
+        modaltitulo.innerText = "Ingresa tus datos para realizar la compra"
+    })
+
     if( userName.value, userApellido.value, userEmail.value, userTdc.value  < 3){
         modaltitulo.innerText = "Datos inválidos"
         return
