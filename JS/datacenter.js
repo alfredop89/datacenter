@@ -27,6 +27,22 @@ document.onclick = () =>{
 cerrar.onclick = () =>{
     dcmodal.classList.remove("open-dcmodal")
 }
+modalbutton[1].onclick = () =>{
+    const tipoPlan = document.querySelector("#tipoPlan")
+    tipoPlan.innerText = "Plan básico"
+}
+modalbutton[2].onclick = () =>{
+    const tipoPlan = document.querySelector("#tipoPlan")
+    tipoPlan.innerText = "Plan Negocios"
+}
+modalbutton[3].onclick = () =>{
+    const tipoPlan = document.querySelector("#tipoPlan")
+    tipoPlan.innerText = "Plan empresas"
+}
+modalbutton[4].onclick = () =>{
+    const tipoPlan = document.querySelector("#tipoPlan")
+    tipoPlan.innerText = "Plan Pro"
+}
 for(let index = 1; index < 5; index++){
     modalbutton[index].addEventListener("click", (e) =>{
         dcmodal.classList.add("open-dcmodal")
@@ -47,12 +63,16 @@ modalBoton.onclick = () =>{
 
     const entrada = document.querySelectorAll(".entradas")
     index = 0
-    for(index = 0; index < 3; index++)
+    for(index = 0; index < 4; index++)
     entrada[index].addEventListener("click", () =>{
         modaltitulo.innerText = "Ingresa tus datos para realizar la compra"
     })
 
-    if( userName.value, userApellido.value, userEmail.value, userTdc.value  < 3){
+    if( userName.value, userApellido.value, userEmail.value, userTdc.value < 3){
+        modaltitulo.innerText = "Datos inválidos"
+        return
+    }
+    else if(userName.value, userApellido.value, userEmail.value, userTdc.value ===""){
         modaltitulo.innerText = "Datos inválidos"
         return
     }
