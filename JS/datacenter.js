@@ -76,6 +76,14 @@ modalBoton.onclick = () =>{
         modaltitulo.innerText = "Datos inválidos"
         return
     }
+    else if(userName.value, userApellido.value, userEmail.value ===""){
+        modaltitulo.innerText = "Datos inválidos"
+        return
+    }
+    else if(userTdc.value <= 1){
+        modaltitulo.innerText = "Datos inválidos"
+        return
+    }
     else{
         modaltitulo.innerText = userName.value + ", " + "gracias por tu compra!"
     }
@@ -110,11 +118,22 @@ formularioContacto.onclick = (e) =>{
 const contactNombre = document.querySelector("#contactnombre")
 const contactEmail = document.querySelector("#contactemail")
 const send = document.querySelector(".contactenviar")
+const textArea = document.querySelector("#textarea")
 
 send.onclick = () =>{
-    if(contactNombre.value, contactEmail.value < 5){
+    if(contactNombre.value, contactEmail.value < 3){
         const contacttitulo = document.querySelector("#contacttitulo")
         contacttitulo.innerText = "Datos inválidos"
+        return
+    }
+    else if(contactNombre.value ===""){
+        const contacttitulo = document.querySelector("#contacttitulo")
+        contacttitulo.innerText = "Datos inválidos"
+        return
+    }
+    else if(textArea.value ===""){
+        const contacttitulo = document.querySelector("#contacttitulo")
+        contacttitulo.innerText = "No puedes enviar un mensaje vacío"
         return
     }
     else{
