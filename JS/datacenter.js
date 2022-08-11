@@ -95,7 +95,6 @@ modalBoton.onclick = () =>{
         correo: userEmail.value
     }
     usuarioDatos.push(user)
-    console.log(user)
 
     const success = document.querySelector("#success-msg")
     success.classList.add("open-success")

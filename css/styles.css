@@ -2,8 +2,6 @@ body{
     font-family: 'Work Sans', sans-serif;
 }
 
-
-
 /* HEADER */
 
 header{
@@ -29,8 +27,6 @@ header{
 .color-bg{
     background-color: rgb(6, 30, 91)
 }
-
-
 
 
 /* BANNER */
@@ -78,7 +74,6 @@ header{
 #bannerphone{
     color: green;
 }
-
 
 
 
