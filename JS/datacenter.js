@@ -2,13 +2,10 @@
 
 const header = document.querySelector("#dc-header")
 window.addEventListener("scroll", () => {
-    if(window.scrollY >= 50){
-        header.classList.add("color-bg")
-    }
-    else{
-        header.classList.remove("color-bg")
-    }
+window.scrollY >= 50 ? header.classList.add("color-bg") : header.classList.remove("color-bg")
 })
+
+
 
 // MODAL
 
