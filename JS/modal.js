@@ -113,6 +113,7 @@ modalBoton.onclick = () =>{
     cerrarRecibo.onclick = () =>{
         reciboContainer.classList.remove("open-recibo")
     }
+    
     const nombreFactura = document.querySelector("#reciboNombre")
     const apellidoFactura = document.querySelector("#reciboApellido")
     const correoFactura = document.querySelector("#reciboCorreo")
@@ -126,8 +127,6 @@ modalBoton.onclick = () =>{
     tdcFactura.innerText = "# TDC: " + userTdc.value
     numeroFactura.innerText = "Factura # : 7854651232587"
     fechaFactura.innerText = "Fecha de la compra: " + new Date().toString();
-
-
 
     modal.reset()
 }
