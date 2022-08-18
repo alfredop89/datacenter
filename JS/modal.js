@@ -118,13 +118,14 @@ modalBoton.onclick = () =>{
     const correoFactura = document.querySelector("#reciboCorreo")
     const tdcFactura = document.querySelector("#reciboTdc")
     const numeroFactura = document.querySelector("#reciboFactura")
+    const fechaFactura = document.querySelector("#reciboFecha")
 
     nombreFactura.innerText = "Nombre: " + userName.value
     apellidoFactura.innerText = "Apellido: " + userApellido.value
     correoFactura.innerText = "Correo electrónico: " + userEmail.value
     tdcFactura.innerText = "# TDC: " + userTdc.value
     numeroFactura.innerText = "Factura # : 7854651232587"
-
+    fechaFactura.innerText = "Fecha de la compra: " + new Date().toString();
 
 
 

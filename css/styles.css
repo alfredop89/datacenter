@@ -307,8 +307,8 @@ footer, a{
 #cerrar-recibo{
     cursor: pointer;
     background-color: rgb(27, 27, 68);
-    padding: 5px;
-    border-radius: 3px;
+    padding: 15px;
+    border-radius: 8px;
     color: white;
     border: none;
 }
