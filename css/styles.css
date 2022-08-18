@@ -1,6 +1,7 @@
 body{
     font-family: 'Work Sans', sans-serif;
     scroll-behavior: smooth;
+    background-color: rgb(255, 255, 255);
 }
 
 /* HEADER */
@@ -183,7 +184,9 @@ h4{
     transition: all 0.5s ease-in;
     
 }
-
+.link-recibo{
+    cursor: pointer;
+}
 
 
 
@@ -276,6 +279,39 @@ footer, a{
 
 
 
+
+
+/* RECIBO */
+
+.recibo-container{
+    background-color: rgba(0, 0, 0, 0.678);
+    position: fixed;
+    inset: 0 !important;
+    z-index: 100;
+    opacity: 0;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease-in-out !important;
+    visibility: hidden;
+    right: 0;
+}
+.recibo-form{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.269);
+}
+.open-recibo{
+    opacity: 1;
+    transition: all 0.5s ease-in-out !important;
+    visibility: visible;
+}
+#cerrar-recibo{
+    cursor: pointer;
+    background-color: rgb(27, 27, 68);
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+    border: none;
+}
 
 
 

@@ -171,18 +171,49 @@
       <br>
       <button class="modalbutton mt-4" id="modalbutton" type="submit">Comprar</button>
 
-  
+      <div class="d-flex column justify-content-between">
         <a id="close-modal" class="text-dark">Cerrar ventana</a>
-
+      </div>
 
     </form>
 
+    
 
-
-    <div id="success-msg" class="dc-success text-light p-3">
+    <div id="success-msg" class="dc-success text-light p-3 text-center">
       <p class="fs-4 p-0 m-0"><i class="dc-succes-icon fa-solid fa-circle-check"></i> Compra realizada exitósamente</p>
+      <a id="recibo" class="text-light link-recibo">Ver recibo</a>
     </div>
   </div>
+
+
+
+
+
+  <!-- RECIBO -->
+
+
+  <div class="recibo-container d-flex row justify-content-center align-items-center p-4">
+      
+    <div class="recibo-form p-3 d-flex row col-12 col-md-6 col-xl-4">
+      <div class="d-flex row justify-content-center align-items-center mb-2">
+        <img class="dc-modal-png mb-3 img-fluid" src="../assets/img/dcgray.png" alt="">
+        <h5 class="p-0 text-center my-3">Gracias por tu compra</h5>
+      </div>
+      <hr>
+      <div class="mb-4 row p-3">
+        <label class="mr-2" id="reciboNombre" for="">Nombre</label>
+        <label class="mr-2" id="reciboApellido" for="">Apellido</label>
+        <label class="mr-2" id="reciboCorreo" for="">Correo electrónico</label>
+        <label class="mr-2" id="reciboTdc" for="">TDC</label>
+        <label class="mr-2" id="reciboFactura" for="">factura #</label>
+        <label class="mb-4" id="reciboPlan" for="">Tipo plan</label>
+
+        <button id="cerrar-recibo" >Cerrar</button>
+      </div>
+    </div>
+
+  </div>
+
 
 
 
@@ -322,6 +353,7 @@
   <script src="JS/header.js"></script>
   <script src="JS/modal.js"></script>
   <script src="JS/modal_contacto.js"></script>
+  <script src="JS/recibo.js"></script>
 
 </body>
 </html>

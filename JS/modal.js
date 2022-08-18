@@ -12,7 +12,7 @@ modal.addEventListener("click", (e) =>{
     e.preventDefault()
 })
 
-
+const facturaPlan = document.querySelector("#reciboPlan")
 document.onclick = () =>{
     dcmodal.classList.remove("open-dcmodal")
 }
@@ -22,18 +22,23 @@ cerrar.onclick = () =>{
 modalbutton[1].onclick = () =>{
     const tipoPlan = document.querySelector("#tipoPlan")
     tipoPlan.innerText = "Plan básico"
+    const facturaPlan = document.querySelector("#reciboPlan")
+    facturaPlan.innerText = "Plan adquirido: Plan básico (15$ + 1.25% I.V.A)"
 }
 modalbutton[2].onclick = () =>{
     const tipoPlan = document.querySelector("#tipoPlan")
     tipoPlan.innerText = "Plan Negocios"
+    facturaPlan.innerText = "Plan adquirido: Plan negocios (35$ + 1.25% I.V.A)"
 }
 modalbutton[3].onclick = () =>{
     const tipoPlan = document.querySelector("#tipoPlan")
     tipoPlan.innerText = "Plan empresas"
+    facturaPlan.innerText = "Plan adquirido: Plan empresas (45$ + 1.25% I.V.A)"
 }
 modalbutton[4].onclick = () =>{
     const tipoPlan = document.querySelector("#tipoPlan")
     tipoPlan.innerText = "Plan Pro"
+    facturaPlan.innerText = "Plan adquirido: Plan PRO (60$ + 1.25% I.V.A)"
 }
 for(let index = 1; index < 5; index++){
     modalbutton[index].addEventListener("click", (e) =>{
@@ -99,6 +104,29 @@ modalBoton.onclick = () =>{
             e.stopPropagation()
         })
     }
+    const recibo = document.querySelector("#recibo")
+    const reciboContainer = document.querySelector(".recibo-container")
+    const cerrarRecibo = document.querySelector("#cerrar-recibo")
+    recibo.onclick = () =>{
+        reciboContainer.classList.add("open-recibo")
+    }
+    cerrarRecibo.onclick = () =>{
+        reciboContainer.classList.remove("open-recibo")
+    }
+    const nombreFactura = document.querySelector("#reciboNombre")
+    const apellidoFactura = document.querySelector("#reciboApellido")
+    const correoFactura = document.querySelector("#reciboCorreo")
+    const tdcFactura = document.querySelector("#reciboTdc")
+    const numeroFactura = document.querySelector("#reciboFactura")
+
+    nombreFactura.innerText = "Nombre: " + userName.value
+    apellidoFactura.innerText = "Apellido: " + userApellido.value
+    correoFactura.innerText = "Correo electrónico: " + userEmail.value
+    tdcFactura.innerText = "# TDC: " + userTdc.value
+    numeroFactura.innerText = "Factura # : 7854651232587"
+
+
+
 
     modal.reset()
 }
