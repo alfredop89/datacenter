@@ -114,6 +114,11 @@ inputs.forEach((e) => {
 
 
 modalComprar.onclick = () =>{
+    const arrayInputs = [...inputs]
+    let index = 0
+    for(index = 0; index <4; index++){
+    arrayInputs[index].textContent ==="" ? modalTitulo.innerText = "Datos inválidos" : modalTitulo.innerText = ''
+    
     if( modalNombre.value, modalAPellido.value, modalCorreo.value, modalTdc.value < 3){
         modalTitulo.innerText = "Datos inválidos"
         return
@@ -138,10 +143,7 @@ modalComprar.onclick = () =>{
         localStorage.setItem('correo',modalCorreo.value)
         localStorage.setItem('tdc',modalTdc.value)
     }
-    const arrayInputs = [...inputs]
-    let index = 0
-    for(index = 0; index <4; index++){
-    arrayInputs[index].textContent ==="" ? modalTitulo.innerText = "Datos inválidos" : modalTitulo.innerText = modalNombre.value + ", " + "gracias por tu compra!"
+
 }
 
     //  IMPRIMIENDO FACTURA

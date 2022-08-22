@@ -96,6 +96,13 @@ h4{
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.269);
     transition: ease 0.5s all;
 }
+.plancard:hover{
+    background-color: rgb(27, 27, 68);
+    color: white;
+}
+.proplan:hover{
+    background-color: rgb(184, 141, 0);
+}
 #cardbutton{
     border-radius: 15px;
     margin-bottom: 40px;
@@ -223,6 +230,9 @@ h4{
     border-radius: 50%;
     height: 250px;
     border: 5px solid white !important;
+}
+.profilepic:hover{
+    padding: 5px;
 }
 
 
