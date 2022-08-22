@@ -25,18 +25,20 @@ divRecibo.innerHTML = `
             `
 reciboContainer.appendChild(divRecibo)
 
-const cerrarRecibo = document.querySelector('#cerrar-recibo')
-const nombreFactura = document.querySelector('#reciboNombre')
-const apellidoFactura = document.querySelector('#reciboApellido')
-const correoFactura = document.querySelector('#reciboTdc')
-const planFactura = document.querySelector('#reciboPlan')
-const fechaFactura = document.querySelector('#reciboFecha')
-const precioFactura = document.querySelector('#reciboPrecio')
+const cerrarRecibo = document.getElementById('cerrar-recibo')
+const nombreFactura = document.getElementById('reciboNombre')
+const apellidoFactura = document.getElementById('reciboApellido')
+const correoFactura = document.getElementById('reciboTdc')
+const tdcFactura = document.getElementById('reciboTdc')
+const planFactura = document.getElementById('reciboPlan')
+const fechaFactura = document.getElementById('reciboFecha')
+const precioFactura = document.getElementById('reciboPrecio')
 
 nombreFactura.innerText = 'Nombre: ' + localStorage.getItem('nombre')
 apellidoFactura.innerText = 'Apellido: ' + localStorage.getItem('apellido')
 correoFactura.innerText = 'Correo electrónico: ' + localStorage.getItem('correo')
 planFactura.innerText = 'Tipo de plan: ' + localStorage.getItem('tipoPlan')
+tdcFactura.innerText = 'TDC: ' + localStorage.getItem('tdc')
 precioFactura.innerText = 'Precio: ' + localStorage.getItem('precio') + '$'
 fechaFactura.innerText = 'Fecha de la compra: ' + new Date().toString()
 
@@ -45,6 +47,7 @@ fechaFactura.innerText = 'Fecha de la compra: ' + new Date().toString()
 cerrarRecibo.onclick = () => {
     reciboContainer.classList.remove('open-recibo')
     modalTitulo.innerText = 'Ingresa tus datos para realizar la compra'
-    localStorage.clear()
+    linkRecibo.classList.remove('open-recibo')
     modal.reset()
+    localStorage.clear()
 }

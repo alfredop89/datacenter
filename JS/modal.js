@@ -57,6 +57,7 @@ abrirModal.forEach((abrir) =>{
 })
 cerrarModal.onclick = () =>{
     dcModal.classList.remove('open-dcmodal')
+    localStorage.clear()
 }
 
 const modal = document.querySelector(".dc-modal")
@@ -127,11 +128,27 @@ modalComprar.onclick = () =>{
     else{
         modalTitulo.innerText = modalNombre.value + ", " + "gracias por tu compra!"
         linkRecibo.classList.add('open-recibo')
-        localStorage.setItem('nombre', JSON.stringify(modalNombre.value))
-        localStorage.setItem('apellido', JSON.stringify(modalAPellido.value))
-        localStorage.setItem('correo', JSON.stringify(modalCorreo.value))
-        localStorage.setItem('tdc', JSON.stringify(modalTdc.value))
+        localStorage.setItem('nombre',modalNombre.value)
+        localStorage.setItem('apellido',modalAPellido.value)
+        localStorage.setItem('correo',modalCorreo.value)
+        localStorage.setItem('tdc',modalTdc.value)
     }
+    const cerrarRecibo = document.getElementById('cerrar-recibo')
+    const nombreFactura = document.getElementById('reciboNombre')
+    const apellidoFactura = document.getElementById('reciboApellido')
+    const correoFactura = document.getElementById('reciboTdc')
+    const tdcFactura = document.getElementById('reciboTdc')
+    const planFactura = document.getElementById('reciboPlan')
+    const fechaFactura = document.getElementById('reciboFecha')
+    const precioFactura = document.getElementById('reciboPrecio')
+
+    nombreFactura.innerText = 'Nombre: ' + localStorage.getItem('nombre')
+    apellidoFactura.innerText = 'Apellido: ' + localStorage.getItem('apellido')
+    correoFactura.innerText = 'Correo electrónico: ' + localStorage.getItem('correo')
+    planFactura.innerText = 'Tipo de plan: ' + localStorage.getItem('tipoPlan')
+    tdcFactura.innerText = 'TDC: ' + localStorage.getItem('tdc')
+    precioFactura.innerText = 'Precio: ' + localStorage.getItem('precio') + '$'
+    fechaFactura.innerText = 'Fecha de la compra: ' + new Date().toString()
 
     const usuarioDatos = []
     let user = {
@@ -140,11 +157,8 @@ modalComprar.onclick = () =>{
         correo: modalCorreo.value
     }
     usuarioDatos.push(user)
-    /* localStorage.setItem("Usuario", JSON.stringify(user)) */
-
 
     Toastify({
-
         style: {
             background: 'rgb(27, 27, 68)'
         },
