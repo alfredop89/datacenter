@@ -37,6 +37,9 @@ div.innerHTML =`
 dcModal.appendChild(div);
 
 
+// ABRIR Y CERRAR EL MODAL
+
+
 const abrirModal = document.querySelectorAll('#cardbutton')
 const abrirModalPro = document.getElementById('cardbutton-pro')
 const cerrarModal = document.getElementById('close-modal')
@@ -65,6 +68,9 @@ modal.addEventListener("click", (e) =>{
     e.stopPropagation()
      e.preventDefault()
 })
+
+
+//  REALIZAR COMPRA
 
 
 const arrayComprar = [...abrirModal]
@@ -133,6 +139,9 @@ modalComprar.onclick = () =>{
         localStorage.setItem('correo',modalCorreo.value)
         localStorage.setItem('tdc',modalTdc.value)
     }
+
+    //  IMPRIMIENDO FACTURA
+
     const cerrarRecibo = document.getElementById('cerrar-recibo')
     const nombreFactura = document.getElementById('reciboNombre')
     const apellidoFactura = document.getElementById('reciboApellido')
@@ -157,6 +166,8 @@ modalComprar.onclick = () =>{
         correo: modalCorreo.value
     }
     usuarioDatos.push(user)
+
+    //  MENSAJE DE TOASTIFY
 
     Toastify({
         style: {
