@@ -1,132 +1,162 @@
+// // MODAL
 
-// MODAL
+const dcModal = document.querySelector('#dc-modal-container')
+dcModal.onclick = () => {
+    dcModal.classList.remove('open-dcmodal')
+}
 
-const dcmodal = document.querySelector(".dc-modal-container")
+let div = document.createElement('div')
+div.classList.add('d-flex', 'justify-content-center', 'align-items-center')
+div.innerHTML =`
+
+                <form id="dc-modal" class="dc-modal d-flex row p-4 col-12 col-md-6 col-xl-4">
+                    <div class="d-flex justify-content-center align-items-center mb-2">
+                        <img class="dc-modal-png" src="./assets/img/dcgray.png" alt="">
+                    </div>
+                    <h5 id="modaltitulo" class="p-0 text-center my-3">Ingresa tus datos para realizar la compra</h5>
+                    <p id="tipoPlan" class="tipoPlan text-center"> </p>
+                    <hr>
+                    <p class="p-0 m-0">Nombre</p>
+                    <input id="modalnombre" class="entradas mb-4" type="text" required>
+                    <p class="p-0 m-0">Apellido</p>
+                    <input id="modalapellido" class="entradas mb-4" type="text" required>
+                    <p class="p-0 m-0">Correo electrónico</p>
+                    <input id="modalcorreo" class="entradas mb-4" type="email" required>
+                    <p class="p-0 m-0">Tarjeta de crédito</p>
+                    <input id="modaltdc" class="entradas mb-4" type="text" placeholder="000-000-000000">
+                    <br>
+                    <button class="modalbutton mt-4" id="modalbutton" type="submit">Comprar</button>
+
+                    <div class="d-flex column justify-content-between">
+                    <a id="close-modal" class="text-dark">Cerrar ventana</a>
+                    <a id="linkRecibo" class="text-dark link-recibo">Ver factura</a>
+                    </div>
+                </form>
+                `
+
+dcModal.appendChild(div);
+
+
+const abrirModal = document.querySelectorAll('#cardbutton')
+const abrirModalPro = document.getElementById('cardbutton-pro')
+const cerrarModal = document.getElementById('close-modal')
+const linkRecibo = document.getElementById('linkRecibo')
+const tipoPlan = document.querySelector('.tipoPlan')
+
+abrirModalPro.onclick = (planes) =>{
+    dcModal.classList.add('open-dcmodal')
+    tipoPlan.innerText = 'plan PRO'
+    localStorage.setItem('tipoPlan', 'PLAN PRO')
+    localStorage.setItem('precio', '60')
+}
+
+abrirModal.forEach((abrir) =>{
+    abrir.onclick = () => {
+        dcModal.classList.add('open-dcmodal')
+    }
+})
+cerrarModal.onclick = () =>{
+    dcModal.classList.remove('open-dcmodal')
+}
+
 const modal = document.querySelector(".dc-modal")
-const modalbutton = document.querySelectorAll(".dc-banner-button")
-const cerrar = document.querySelector("#close-modal")
-const inputs = document.querySelectorAll("input")
-
 modal.addEventListener("click", (e) =>{
     e.stopPropagation()
-    e.preventDefault()
+     e.preventDefault()
 })
 
-const facturaPlan = document.querySelector("#reciboPlan")
-document.onclick = () =>{
-    dcmodal.classList.remove("open-dcmodal")
-}
-cerrar.onclick = () =>{
-    dcmodal.classList.remove("open-dcmodal")
-}
-modalbutton[1].onclick = () =>{
-    const tipoPlan = document.querySelector("#tipoPlan")
-    tipoPlan.innerText = "Plan básico"
-    const facturaPlan = document.querySelector("#reciboPlan")
-    facturaPlan.innerText = "Plan adquirido: Plan básico (15$ + 1.25% I.V.A)"
-}
-modalbutton[2].onclick = () =>{
-    const tipoPlan = document.querySelector("#tipoPlan")
-    tipoPlan.innerText = "Plan Negocios"
-    facturaPlan.innerText = "Plan adquirido: Plan negocios (35$ + 1.25% I.V.A)"
-}
-modalbutton[3].onclick = () =>{
-    const tipoPlan = document.querySelector("#tipoPlan")
-    tipoPlan.innerText = "Plan empresas"
-    facturaPlan.innerText = "Plan adquirido: Plan empresas (45$ + 1.25% I.V.A)"
-}
-modalbutton[4].onclick = () =>{
-    const tipoPlan = document.querySelector("#tipoPlan")
-    tipoPlan.innerText = "Plan Pro"
-    facturaPlan.innerText = "Plan adquirido: Plan PRO (60$ + 1.25% I.V.A)"
-}
-for(let index = 1; index < 5; index++){
-    modalbutton[index].addEventListener("click", (e) =>{
-        dcmodal.classList.add("open-dcmodal")
-        e.stopPropagation()
-    })
+
+const arrayComprar = [...abrirModal]
+console.log(arrayComprar)
+for (i=0; i<3; i++){
+    arrayComprar[0].onclick = () =>{
+        tipoPlan.innerText = 'plan básico'
+        dcModal.classList.add('open-dcmodal')
+        localStorage.setItem('tipoPlan', 'PLAN BÁSICO')
+        localStorage.setItem('precio', '15')
+    }
+    arrayComprar[1].onclick = () =>{
+        tipoPlan.innerText = 'plan negocios'
+        dcModal.classList.add('open-dcmodal')
+        localStorage.setItem('tipoPlan', 'PLAN NEGOCIOS')
+        localStorage.setItem('precio', '35')
+    }
+    arrayComprar[2].onclick = () =>{
+        tipoPlan.innerText = 'plan empresas'
+        dcModal.classList.add('open-dcmodal')
+        localStorage.setItem('tipoPlan', 'PLAN EMPRESAS')
+        localStorage.setItem('precio', '45')
+    }
 }
 
 
-// MODAL FORM
 
-const modalBoton = document.querySelector("#modalbutton")
-modalBoton.onclick = () =>{
-    const userName = document.querySelector("#modalnombre")
-    const userApellido = document.querySelector("#modalapellido")
-    const userEmail = document.querySelector("#modalcorreo")
-    const userTdc = document.querySelector("#modaltdc")
-    const modaltitulo = document.querySelector("#modaltitulo")
+// // MODAL FORM
 
-    const entrada = document.querySelectorAll(".entradas")
-    index = 0
-    for(index = 0; index < 4; index++)
-    entrada[index].addEventListener("click", () =>{
-        modaltitulo.innerText = "Ingresa tus datos para realizar la compra"
-    })
+const modalNombre = document.getElementById('modalnombre')
+const modalAPellido = document.getElementById('modalapellido')
+const modalCorreo = document.getElementById('modalcorreo')
+const modalTdc = document.getElementById('modaltdc')
+const modalTitulo = document.getElementById('modaltitulo')
+const modalComprar = document.getElementById('modalbutton')
+const inputs = document.querySelectorAll('.entradas')
 
-    if( userName.value, userApellido.value, userEmail.value, userTdc.value < 3){
-        modaltitulo.innerText = "Datos inválidos"
+inputs.forEach((e) => {
+    e.onclick = () => {
+        modalTitulo.innerText = 'Ingresa tus datos para realizar la compra'
+    }
+})
+
+modalComprar.onclick = () =>{
+    if( modalNombre.value, modalAPellido.value, modalCorreo.value, modalTdc.value < 3){
+        modalTitulo.innerText = "Datos inválidos"
         return
     }
-    else if(userName.value, userApellido.value, userEmail.value, userTdc.value ===""){
-        modaltitulo.innerText = "Datos inválidos"
+    else if(modalNombre.value, modalAPellido.value, modalCorreo.value, modalTdc.value ===""){
+        modalTitulo.innerText = "Datos inválidos"
         return
     }
-    else if(userName.value, userApellido.value, userEmail.value ===""){
-        modaltitulo.innerText = "Datos inválidos"
+    else if(modalNombre.value, modalAPellido.value, modalCorreo.value ===""){
+        modalTitulo.innerText = "Datos inválidos"
         return
     }
-    else if(userTdc.value <= 1){
-        modaltitulo.innerText = "Datos inválidos"
+    else if(modalTdc.value <= 1){
+        modalTitulo.innerText = "Datos inválidos"
         return
     }
     else{
-        modaltitulo.innerText = userName.value + ", " + "gracias por tu compra!"
+        modalTitulo.innerText = modalNombre.value + ", " + "gracias por tu compra!"
+        linkRecibo.classList.add('open-recibo')
+        localStorage.setItem('nombre', JSON.stringify(modalNombre.value))
+        localStorage.setItem('apellido', JSON.stringify(modalAPellido.value))
+        localStorage.setItem('correo', JSON.stringify(modalCorreo.value))
+        localStorage.setItem('tdc', JSON.stringify(modalTdc.value))
     }
-
 
     const usuarioDatos = []
     let user = {
-        nombre: userName.value,
-        apellido: userApellido.value,
-        correo: userEmail.value
+        nombre: modalNombre.value,
+        apellido: modalAPellido.value,
+        correo: modalCorreo.value
     }
     usuarioDatos.push(user)
-    localStorage.setItem("Usuario", JSON.stringify(user))
+    /* localStorage.setItem("Usuario", JSON.stringify(user)) */
 
-    const success = document.querySelector("#success-msg")
-    success.classList.add("open-success")
-    for(let index = 1; index < 5; index++){
-        modalbutton[index].addEventListener("click", (e) =>{
-            success.classList.remove("open-success")
-            modaltitulo.innerText = "Ingresa tus datos para realizar la compra"
-            e.stopPropagation()
-        })
-    }
-    const recibo = document.querySelector("#recibo")
-    const reciboContainer = document.querySelector(".recibo-container")
-    const cerrarRecibo = document.querySelector("#cerrar-recibo")
-    recibo.onclick = () =>{
-        reciboContainer.classList.add("open-recibo")
-    }
-    cerrarRecibo.onclick = () =>{
-        reciboContainer.classList.remove("open-recibo")
-    }
-    
-    const nombreFactura = document.querySelector("#reciboNombre")
-    const apellidoFactura = document.querySelector("#reciboApellido")
-    const correoFactura = document.querySelector("#reciboCorreo")
-    const tdcFactura = document.querySelector("#reciboTdc")
-    const numeroFactura = document.querySelector("#reciboFactura")
-    const fechaFactura = document.querySelector("#reciboFecha")
 
-    nombreFactura.innerText = "Nombre: " + userName.value
-    apellidoFactura.innerText = "Apellido: " + userApellido.value
-    correoFactura.innerText = "Correo electrónico: " + userEmail.value
-    tdcFactura.innerText = "# TDC: " + userTdc.value
-    numeroFactura.innerText = "Factura # : 7854651232587"
-    fechaFactura.innerText = "Fecha de la compra: " + new Date().toString();
+    Toastify({
 
-    modal.reset()
+        style: {
+            background: 'rgb(27, 27, 68)'
+        },
+        gravity: "top",
+        position: 'center',
+        text: 'Compra realizada exitósamente',
+        duration: 6000
+        
+        }).showToast();
+}
+
+linkRecibo.onclick = () =>{
+    dcModal.classList.remove('open-dcmodal')
+    reciboContainer.classList.add('open-recibo')
 }

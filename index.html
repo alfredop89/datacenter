@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4c1a11ecc8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
     <title>Datacenter</title>
@@ -47,7 +49,7 @@
   </header>
 
 <!-- BANNER -->
-    
+
   <div class="dc-banner m-0 d-flex justify-content-center align-items-center">
     <div class="container dc-banner-text col-12 text-light text-center mt-5">
       <h1 class="mb-4" id="dc-banner-titulo">Bienvenido a Datacenter</h1>
@@ -68,6 +70,7 @@
 
 <!-- BLOQUE UNO -->
 
+<section>
   <div id="bloque-planes" class="container">
     <div class="text-center mt-5">
       <h4 class="mt-5">Escoge el plan que mejor se adapte a tus necesidades</h4>
@@ -88,146 +91,42 @@
       </div>
     </div>
   </div>
+</section>
 
+
+<section>
   <div class="container my-4">
-
-    <div class="d-flex row justify-content-center align-items-center">
-      <div id="basico" class="plancard text-center p-3 col-12 col-md-6 m-4">
-        <h2 class="cardtitle p-3 mb-4">Básico</h2>
-        <h3 class="fs-2">15$/mes</h3>
-        <p>(Disponible para cancelar anualmente)</p>
-        <br>
-        <button id="cardbutton" class="dc-banner-button">Comprar</button>
-        <br>
-        <h6>100 GB de almacenamiento</h6>
-        <h6>1 Usuario incluido</h5>
-        <h6>Transferencia de datos básica</h6>
-        <h6 class="mb-4">Servicio de respaldo de datos</h6>
-      </div>
-
-      <div id="negocios" class="plancard text-center p-3 col-12 col-md-6 m-4">
-        <h2 class="cardtitle p-3 mb-4">Negocios</h2>
-        <h3 class="fs-2">35$/mes</h3>
-        <p>(Disponible para cancelar anualmente)</p>
-        <br>
-        <button id="cardbutton" class="dc-banner-button">Comprar</button>
-        <br>
-        <h6>300 GB de almacenamiento</h6>
-        <h6>25 Usuarios incluidos</h6>
-        <h6>Alta velocidad de transferencia</h6>
-        <h6 class="mb-4">Servicio de respaldo de datos</h6>
-      </div>
-
-      <div id="empresas" class="plancard text-center p-3 col-12 col-md-6 m-4">
-        <h2 class="cardtitle p-3 mb-4">Empresas</h2>
-        <h3 class="fs-2">45$/mes</h3>
-        <p>(Disponible para cancelar anualmente)</p>
-        <br>
-        <button id="cardbutton" class="dc-banner-button">Comprar</button>
-        <br>
-        <h6>750 GB de almacenamiento</h6>
-        <h6>50 Usuarios incluidos</h6>
-        <h6>Alta velocidad de transferencia</h6>
-        <h6 class="mb-4">Servicio de respaldo de datos</h6>
-      </div>
-
-      <div id="pro" class="plancard text-center text-light p-3 col-12 col-md-6 m-4">
-        <h2 id="cardtitle-pro" class="p-3 mb-4">Pro</h2>
-        <h3 class="fs-2">60$/mes</h3>
-        <p>(Disponible para cancelar anualmente)</p>
-        <br>
-        <button id="cardbutton-pro" class="dc-banner-button text-dark">Comprar</button>
-        <br>
-        <h6>2TB GB de almacenamiento</h6>
-        <h6>Usuarios ilimitados</h6>
-        <h6>Transferencia exclusiva</h6>
-        <h6 class="mb-4">Servicio de respaldo de datos</h6>
-      </div>
+    <div id="planes-container" class="d-flex row justify-content-center align-items-center">
       <div class="container text-center mt-5">
         <p>*** Los precios incluidos en cada plan no incluyen I.V.A. del 21%, se aplican condiciones generales</p>
       </div>
     </div>
   </div>
+</section>
+
 
 
   <!-- MODAL -->
 
   <div id="dc-modal-container" class="dc-modal-container d-flex justify-content-center align-items-center p-4">
-    <form id="dc-modal" class="dc-modal d-flex row p-4 col-12 col-md-6 col-xl-4">
-      <div class="d-flex justify-content-center align-items-center mb-2">
-        <img class="dc-modal-png" src="./assets/img/dcgray.png" alt="">
-      </div>
-      <h5 id="modaltitulo" class="p-0 text-center my-3">Ingresa tus datos para realizar la compra</h5>
-      <p id="tipoPlan" class="text-center">Tipo de plan</p>
-      <hr>
-      <p class="p-0 m-0">Nombre</p>
-      <input id="modalnombre" class="entradas mb-4" type="text" required>
-      <p class="p-0 m-0">Apellido</p>
-      <input id="modalapellido" class="entradas mb-4" type="text" required>
-      <p class="p-0 m-0">Correo electrónico</p>
-      <input id="modalcorreo" class="entradas mb-4" type="email" required>
-      <p class="p-0 m-0">Tarjeta de crédito</p>
-      <input id="modaltdc" class="entradas mb-4" type="text" placeholder="000-000-000000">
-      <br>
-      <button class="modalbutton mt-4" id="modalbutton" type="submit">Comprar</button>
-
-      <div class="d-flex column justify-content-between">
-        <a id="close-modal" class="text-dark">Cerrar ventana</a>
-      </div>
-
-    </form>
-
-    
-
-    <div id="success-msg" class="dc-success text-light p-3 text-center">
-      <p class="fs-4 p-0 m-0"><i class="dc-succes-icon fa-solid fa-circle-check"></i> Compra realizada exitósamente</p>
-      <a id="recibo" class="text-light link-recibo">Ver recibo</a>
-    </div>
   </div>
-
-
-
 
 
   <!-- RECIBO -->
 
-
-  <div class="recibo-container d-flex row justify-content-center align-items-center p-4">
-      
-    <div class="recibo-form p-3 d-flex row col-12 col-md-6 col-xl-4">
-      <div class="d-flex row justify-content-center align-items-center mb-2">
-        <img class="dc-modal-png mb-3 img-fluid" src="./assets/img/dcgray.png" alt="">
-        <h5 class="p-0 text-center my-3">Gracias por tu compra</h5>
-      </div>
-      <hr>
-      <div class="mb-4 row p-3">
-        <label class="mr-2" id="reciboNombre" for="">Nombre</label>
-        <label class="mr-2" id="reciboApellido" for="">Apellido</label>
-        <label class="mr-2" id="reciboCorreo" for="">Correo electrónico</label>
-        <label class="mr-2" id="reciboTdc" for="">TDC</label>
-        <label class="mr-2" id="reciboFactura" for="">factura #</label>
-        <label class="mb-4" id="reciboPlan" for="">Tipo plan</label>
-        <label class="mb-4" id="reciboFecha" for="">Fecha de la compra</label>
-
-       <div class="text-center">
-        <button class="w-auto" id="cerrar-recibo" >Cerrar</button>
-       </div> 
-      </div>
-    </div>
+  <div id="recibo-container" class="recibo-container d-flex row justify-content-center align-items-center p-4">
 
   </div>
 
 
-
-
 <!-- BLOQUE DOS -->
 
+<section>
   <div id="servicios" class="w-100 d-flex justify-content-center">
     <div class="container d-flex row p-3 w-100 justify-content-center">
       <div class="text-center mb-3 fs-1">
-      <h2 class="my-4" id="serviciostitle">Nuestros servicios</h2>  
+      <h2 class="my-4" id="serviciostitle">Nuestros servicios</h2>
       </div>
-      
       <div class="col-12 col-md-6 col-lg-4 p-3">
         <h3 class="mb-3" id="serviciostitle"><i id="check-icon" class="fa-solid fa-circle-dot"></i> Accesibilidad</h3>
         <p>Descarga la aplicación en tu smartphone o tablet para tener siempre tus datos a mano: en la oficina, en la carretera o mientras estés con tus clientes. No importa si olvidas tu portátil en la oficina o te quedas sin batería a mitad de la presentación. Podrás acceder a tus datos en el cloud, desde cualquier navegador en cualquier dispositivo; lo que significa que todavía tendrás esas importantes cifras de ventas a mano, o simplemente podrás terminar tu presentación incluso en el ordenador de algún compañero.</p>
@@ -242,7 +141,6 @@
       </div>
     </div>
   </div>
-
   <div class="w-100 d-flex justify-content-center mb-5">
     <div class="container d-flex row w-100 justify-content-center">
       <div class="col-12 col-md-6 col-lg-4 p-3">
@@ -260,8 +158,15 @@
     </div>
   </div>
 
+
+
+
+</section>
+
+
 <!-- BLOQUE TRES -->
 
+<section>
   <div class="bloquetres d-flex justify-content-center p-3">
     <div class="container bloquetres d-flex row justify-content-center align-items-center text-light">
       <div class="col-12 col-md-6 mb-5 text-center">
@@ -277,25 +182,31 @@
       </div>
     </div>
   </div>
+</section>
+
 
 <!-- BLOQUE CUATRO -->
 
-<div id="nosotros" class="d-flex justify-content-center p-3">
-  <div class="container d-flex row justify-content-center align-items-center">
-    <div class="col-12 col-md-12 col-lg-6 my-5">
-      <h3 id="serviciostitle" class="my-4">Nosotros</h3>
-      <p>Datacenter es el aliado en soluciones de hosting y cloud para las pymes. Somos expertos en IaaS y ofrecemos un portafolio de soluciones para posicionar a las empresas online y para que éstas puedan trabajar en el mundo digital. Como la mayor empresa de hosting en Europa, contamos con más de 8 millones de contratos y alojamos más de 12 millones de dominios en nuestros centros de datos en todo el mundo.</p>
-      <p>Ofrecemos nuestros servicios a autónomos que dan sus primeros pasos online, a dueños de negocios crecientes, a grandes empresas y a socios que les estén ayudando a alcanzar sus metas. No importa si estás construyendo tu presencia online comprando un dominio, si estás creando tu página web, trasladando procesos de back-office a la cloud u organizando un cluster de contenedores, nuestro portafolio de productos te ofrece aplicaciones, servidores y servicios de primera.</p>
-      <p>Nuestros productos están diseñados para aportarte confianza y seguridad. La red de centros de datos que hemos creado proporcionan el mejor rendimiento y georredundancia. En Dtacenter nos enorgullecemos de la tradición en tecnología puntera, la política de privacidad sólida y una seguridad de datos integral.</p>
-    </div>
-    <div class="d-flex justify-content-center align-items-center col-12 col-md-6 my-5">
-      <img class="img-fluid serverpng" src="./assets/img/17_generated.jpg" alt="">
+<section>
+  <div id="nosotros" class="d-flex justify-content-center p-3">
+    <div class="container d-flex row justify-content-center align-items-center">
+      <div class="col-12 col-md-12 col-lg-6 my-5">
+        <h3 id="serviciostitle" class="my-4">Nosotros</h3>
+        <p>Datacenter es el aliado en soluciones de hosting y cloud para las pymes. Somos expertos en IaaS y ofrecemos un portafolio de soluciones para posicionar a las empresas online y para que éstas puedan trabajar en el mundo digital. Como la mayor empresa de hosting en Europa, contamos con más de 8 millones de contratos y alojamos más de 12 millones de dominios en nuestros centros de datos en todo el mundo.</p>
+        <p>Ofrecemos nuestros servicios a autónomos que dan sus primeros pasos online, a dueños de negocios crecientes, a grandes empresas y a socios que les estén ayudando a alcanzar sus metas. No importa si estás construyendo tu presencia online comprando un dominio, si estás creando tu página web, trasladando procesos de back-office a la cloud u organizando un cluster de contenedores, nuestro portafolio de productos te ofrece aplicaciones, servidores y servicios de primera.</p>
+        <p>Nuestros productos están diseñados para aportarte confianza y seguridad. La red de centros de datos que hemos creado proporcionan el mejor rendimiento y georredundancia. En Dtacenter nos enorgullecemos de la tradición en tecnología puntera, la política de privacidad sólida y una seguridad de datos integral.</p>
+      </div>
+      <div class="d-flex justify-content-center align-items-center col-12 col-md-6 my-5">
+        <img class="img-fluid serverpng" src="./assets/img/17_generated.jpg" alt="">
+      </div>
     </div>
   </div>
-</div>
+</section>
+
 
 <!-- CONTACTO -->
 
+<section>
   <div id="contacto" class="contacto d-flex justify-content-center align-items-center">
     <div class="container p-5 col-12 col-md-8 col-lg-6">
       <form id="contactform" class="d-flex row contactform p-4 col-12 col-md-6 col-lg-6">
@@ -312,10 +223,11 @@
         </div>
         <div>
           <button id="formbutton" class="contactenviar" type="submit">Enviar</button>
-        </div>     
+        </div>
       </form>
     </div>
   </div>
+</section>
 
 
 <!-- FOOTER -->
@@ -352,11 +264,16 @@
 <!--SCRIPTS-->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
   
-  <script src="JS/header.js"></script>
-  <script src="JS/modal.js"></script>
-  <script src="JS/modal_contacto.js"></script>
-  <script src="JS/recibo.js"></script>
+  <script src="./JS/header.js"></script>
+  <script src="./JS/planes.js"></script>
+  <script src="./JS/modal.js"></script>
+  <script src="./JS/modal_contacto.js"></script>
+  <script src="./JS/recibo.js"></script>
+
 
 </body>
 </html>

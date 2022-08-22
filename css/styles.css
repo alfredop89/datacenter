@@ -109,7 +109,7 @@ h4{
 #negocios{
     background-color: rgba(6, 30, 91, 0.13);
 }
-#pro{
+.proplan, #pro{
     background-color: rgb(27, 27, 68);
 }
 #cardtitle-pro{
@@ -127,8 +127,6 @@ h4{
 /* MODAL */
 
 .dc-modal-container{
-    width: 100%;
-    height: 100vh;
     background-color: rgba(0, 0, 0, 0.678);
     position: fixed;
     inset: 0;
@@ -186,7 +184,14 @@ h4{
 }
 .link-recibo{
     cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
 }
+.open-recibo{
+    opacity: 1;
+    visibility: visible;
+}
+
 
 
 
@@ -229,6 +234,8 @@ h4{
 
 
 /* CONTACTO */
+
+
 .contacto{
     height: 600px;
     background-image: url(../assets/img/banner-fondo.jpg);
@@ -311,7 +318,7 @@ footer, a{
     border-radius: 8px;
     color: white;
     border: none;
-}
+} 
 
 
 
