@@ -40,8 +40,6 @@ const planPro = [
 ]
 
 
-
-
 listaPlanes.forEach((planes)=>{
     const planesContainer = document.getElementById('planes-container')
     const div = document.createElement('div')
@@ -60,7 +58,6 @@ listaPlanes.forEach((planes)=>{
     `
     planesContainer.appendChild(div)
 })
-
 
 
 planPro.forEach((pro)=>{

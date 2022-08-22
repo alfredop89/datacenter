@@ -25,6 +25,7 @@ divRecibo.innerHTML = `
             `
 reciboContainer.appendChild(divRecibo)
 
+const cerrarRecibo = document.getElementById('cerrar-recibo')
 cerrarRecibo.onclick = () => {
     reciboContainer.classList.remove('open-recibo')
     modalTitulo.innerText = 'Ingresa tus datos para realizar la compra'

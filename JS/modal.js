@@ -8,7 +8,6 @@ dcModal.onclick = () => {
 let div = document.createElement('div')
 div.classList.add('d-flex', 'justify-content-center', 'align-items-center')
 div.innerHTML =`
-
                 <form id="dc-modal" class="dc-modal d-flex row p-4 col-12 col-md-6 col-xl-4">
                     <div class="d-flex justify-content-center align-items-center mb-2">
                         <img class="dc-modal-png" src="./assets/img/dcgray.png" alt="">
@@ -26,7 +25,6 @@ div.innerHTML =`
                     <input id="modaltdc" class="entradas mb-4" type="text" placeholder="000-000-000000">
                     <br>
                     <button class="modalbutton mt-4" id="modalbutton" type="submit">Comprar</button>
-
                     <div class="d-flex column justify-content-between">
                     <a id="close-modal" class="text-dark">Cerrar ventana</a>
                     <a id="linkRecibo" class="text-dark link-recibo">Ver factura</a>
@@ -114,6 +112,7 @@ inputs.forEach((e) => {
     }
 })
 
+
 modalComprar.onclick = () =>{
     if( modalNombre.value, modalAPellido.value, modalCorreo.value, modalTdc.value < 3){
         modalTitulo.innerText = "Datos inválidos"
@@ -139,13 +138,18 @@ modalComprar.onclick = () =>{
         localStorage.setItem('correo',modalCorreo.value)
         localStorage.setItem('tdc',modalTdc.value)
     }
+    const arrayInputs = [...inputs]
+    let index = 0
+    for(index = 0; index <4; index++){
+    arrayInputs[index].textContent ==="" ? modalTitulo.innerText = "Datos inválidos" : modalTitulo.innerText = modalNombre.value + ", " + "gracias por tu compra!"
+}
 
     //  IMPRIMIENDO FACTURA
 
     const cerrarRecibo = document.getElementById('cerrar-recibo')
     const nombreFactura = document.getElementById('reciboNombre')
     const apellidoFactura = document.getElementById('reciboApellido')
-    const correoFactura = document.getElementById('reciboTdc')
+    const correoFactura = document.getElementById('reciboCorreo')
     const tdcFactura = document.getElementById('reciboTdc')
     const planFactura = document.getElementById('reciboPlan')
     const fechaFactura = document.getElementById('reciboFecha')
@@ -156,7 +160,7 @@ modalComprar.onclick = () =>{
     correoFactura.innerText = 'Correo electrónico: ' + localStorage.getItem('correo')
     planFactura.innerText = 'Tipo de plan: ' + localStorage.getItem('tipoPlan')
     tdcFactura.innerText = 'TDC: ' + localStorage.getItem('tdc')
-    precioFactura.innerText = 'Precio: ' + localStorage.getItem('precio') + '$'
+    precioFactura.innerText = 'Precio: ' + localStorage.getItem('precio') + '$' + ' + I.V.A. - TOTAL : ' + localStorage.getItem('precio')* 1.25 + '$'
     fechaFactura.innerText = 'Fecha de la compra: ' + new Date().toString()
 
     const usuarioDatos = []
