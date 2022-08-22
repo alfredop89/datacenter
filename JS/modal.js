@@ -68,7 +68,7 @@ modal.addEventListener("click", (e) =>{
 
 
 const arrayComprar = [...abrirModal]
-console.log(arrayComprar)
+
 for (i=0; i<3; i++){
     arrayComprar[0].onclick = () =>{
         tipoPlan.innerText = 'plan básico'
