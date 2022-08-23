@@ -4,6 +4,36 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
+/* MODAL OFERTA */
+
+
+.modal-oferta{
+    background-color: rgba(0, 0, 0, 0.678);
+    position: fixed;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    height: 100vh;
+    width: 100%;
+    inset:  0;
+    transition: all 0.3s ease-in-out;
+}
+.oferta{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.269);
+    
+}
+.oferta-icon{
+    color: green;
+    font-size: 80px;
+}
+.open-oferta{
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+
 /* HEADER */
 
 header{
@@ -99,6 +129,7 @@ h4{
 .plancard:hover{
     background-color: rgb(27, 27, 68);
     color: white;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.526);
 }
 .proplan:hover{
     background-color: rgb(184, 141, 0);

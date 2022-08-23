@@ -31,8 +31,7 @@ div.innerHTML =`
                     </div>
                 </form>
                 `
-
-dcModal.appendChild(div);
+dcModal.appendChild(div)
 
 
 // ABRIR Y CERRAR EL MODAL
