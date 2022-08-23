@@ -70,7 +70,6 @@ modal.addEventListener("click", (e) =>{
 
 const arrayComprar = [...abrirModal]
 
-for (i=0; i<3; i++){
     arrayComprar[0].onclick = () =>{
         tipoPlan.innerText = 'plan básico'
         dcModal.classList.add('open-dcmodal')
@@ -89,7 +88,7 @@ for (i=0; i<3; i++){
         localStorage.setItem('tipoPlan', 'PLAN EMPRESAS')
         localStorage.setItem('precio', '45')
     }
-}
+
 
 // // MODAL FORM
 
@@ -121,6 +120,7 @@ modalComprar.onclick = () =>{
         else{
             modalTitulo.innerText = modalNombre.value + ", " + "gracias por tu compra!"
             linkRecibo.classList.add('open-recibo')
+            
             localStorage.setItem('nombre',modalNombre.value)
             localStorage.setItem('apellido',modalAPellido.value)
             localStorage.setItem('correo',modalCorreo.value)
@@ -131,21 +131,21 @@ modalComprar.onclick = () =>{
     //  IMPRIMIENDO FACTURA
 
     const cerrarRecibo = document.getElementById('cerrar-recibo')
-    const nombreFactura = document.getElementById('reciboNombre')
-    const apellidoFactura = document.getElementById('reciboApellido')
-    const correoFactura = document.getElementById('reciboCorreo')
-    const tdcFactura = document.getElementById('reciboTdc')
-    const planFactura = document.getElementById('reciboPlan')
-    const fechaFactura = document.getElementById('reciboFecha')
-    const precioFactura = document.getElementById('reciboPrecio')
 
-    nombreFactura.innerText = 'Nombre: ' + localStorage.getItem('nombre')
-    apellidoFactura.innerText = 'Apellido: ' + localStorage.getItem('apellido')
-    correoFactura.innerText = 'Correo electrónico: ' + localStorage.getItem('correo')
-    planFactura.innerText = 'Tipo de plan: ' + localStorage.getItem('tipoPlan')
-    tdcFactura.innerText = 'TDC: ' + localStorage.getItem('tdc')
-    precioFactura.innerText = 'Precio: ' + localStorage.getItem('precio') + '$' + ' + I.V.A. - TOTAL : ' + localStorage.getItem('precio')* 1.25 + '$'
-    fechaFactura.innerText = 'Fecha de la compra: ' + new Date().toString()
+    const nombreFactura = document.getElementById('reciboNombre').innerText = 'Nombre: ' + localStorage.getItem('nombre')
+
+    const apellidoFactura = document.getElementById('reciboApellido').innerText = 'Apellido: ' + localStorage.getItem('apellido')
+
+    const correoFactura = document.getElementById('reciboCorreo').innerText = 'Correo electrónico: ' + localStorage.getItem('correo')
+
+    const tdcFactura = document.getElementById('reciboTdc').innerText = 'TDC: ' + localStorage.getItem('tdc')
+
+    const planFactura = document.getElementById('reciboPlan').innerText = 'Tipo de plan: ' + localStorage.getItem('tipoPlan')
+
+    const precioFactura = document.getElementById('reciboPrecio').innerText = 'Precio: ' + localStorage.getItem('precio') + '$' + ' + I.V.A. - TOTAL : ' + localStorage.getItem('precio')* 1.25 + '$'
+
+    const fechaFactura = document.getElementById('reciboFecha').innerText = 'Fecha de la compra: ' + new Date().toString()
+
 
     //  MENSAJE DE TOASTIFY
 
