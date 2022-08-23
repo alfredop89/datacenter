@@ -2,7 +2,7 @@ const modalOferta = document.querySelector('#modal-oferta')
 const cerrarOferta = document.getElementById('cerrar-oferta')
 
 let divOferta = document.createElement('div')
-divOferta.classList.add('oferta', 'text-center', 'd-flex', 'row', 'justify-content-center', 'align-items-center', 'col-12', 'col-sm-8', 'col-md-6', 'p-4', 'm-4')
+divOferta.classList.add('oferta', 'text-center', 'd-flex', 'row', 'justify-content-center', 'align-items-center', 'col-12', 'col-sm-8', 'col-md-6', 'col-lg-4', 'p-4', 'm-4')
 
 divOferta.innerHTML = `
                 <h3 class="mb-4">Aprovecha las ofertas que te ofrece Datacenter</h3>

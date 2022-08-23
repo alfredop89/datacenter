@@ -86,7 +86,7 @@ header{
     margin-top: 15px;
 }
 .dc-banner-button:hover{
-    background-color: rgb(8, 20, 50);
+    background-color: green;
     transition: all 0.5s ease;
 }
 .dc-banner, p{
