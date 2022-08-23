@@ -37,7 +37,6 @@ dcModal.appendChild(div);
 
 // ABRIR Y CERRAR EL MODAL
 
-
 const abrirModal = document.querySelectorAll('#cardbutton')
 const abrirModalPro = document.getElementById('cardbutton-pro')
 const cerrarModal = document.getElementById('close-modal')
@@ -70,7 +69,6 @@ modal.addEventListener("click", (e) =>{
 
 //  REALIZAR COMPRA
 
-
 const arrayComprar = [...abrirModal]
 
 for (i=0; i<3; i++){
@@ -94,8 +92,6 @@ for (i=0; i<3; i++){
     }
 }
 
-
-
 // // MODAL FORM
 
 const modalNombre = document.getElementById('modalnombre')
@@ -112,40 +108,27 @@ inputs.forEach((e) => {
     }
 })
 
-
 modalComprar.onclick = () =>{
+    
     const arrayInputs = [...inputs]
     let index = 0
     for(index = 0; index <4; index++){
-    arrayInputs[index].textContent ==="" ? modalTitulo.innerText = "Datos inválidos" : modalTitulo.innerText = ''
+    arrayInputs[index].textContent <= 3 ? modalTitulo.innerText = "Datos inválidos" : modalTitulo.innerText = 'Gracias por tu compra'
     
-    if( modalNombre.value, modalAPellido.value, modalCorreo.value, modalTdc.value < 3){
-        modalTitulo.innerText = "Datos inválidos"
-        return
-    }
-    else if(modalNombre.value, modalAPellido.value, modalCorreo.value, modalTdc.value ===""){
-        modalTitulo.innerText = "Datos inválidos"
-        return
-    }
-    else if(modalNombre.value, modalAPellido.value, modalCorreo.value ===""){
-        modalTitulo.innerText = "Datos inválidos"
-        return
-    }
-    else if(modalTdc.value <= 1){
-        modalTitulo.innerText = "Datos inválidos"
-        return
-    }
-    else{
-        modalTitulo.innerText = modalNombre.value + ", " + "gracias por tu compra!"
-        linkRecibo.classList.add('open-recibo')
-        localStorage.setItem('nombre',modalNombre.value)
-        localStorage.setItem('apellido',modalAPellido.value)
-        localStorage.setItem('correo',modalCorreo.value)
-        localStorage.setItem('tdc',modalTdc.value)
-    }
+        if( modalNombre.value === "" || modalAPellido.value === "" || modalCorreo.value === "" || modalTdc.value === ""){
+            modalTitulo.innerText = "No puedes dejar campos vacíos"
+            return
+        }
+        else{
+            modalTitulo.innerText = modalNombre.value + ", " + "gracias por tu compra!"
+            linkRecibo.classList.add('open-recibo')
+            localStorage.setItem('nombre',modalNombre.value)
+            localStorage.setItem('apellido',modalAPellido.value)
+            localStorage.setItem('correo',modalCorreo.value)
+            localStorage.setItem('tdc',modalTdc.value)
+        }
 
-}
-
+    }
     //  IMPRIMIENDO FACTURA
 
     const cerrarRecibo = document.getElementById('cerrar-recibo')
@@ -165,14 +148,6 @@ modalComprar.onclick = () =>{
     precioFactura.innerText = 'Precio: ' + localStorage.getItem('precio') + '$' + ' + I.V.A. - TOTAL : ' + localStorage.getItem('precio')* 1.25 + '$'
     fechaFactura.innerText = 'Fecha de la compra: ' + new Date().toString()
 
-    const usuarioDatos = []
-    let user = {
-        nombre: modalNombre.value,
-        apellido: modalAPellido.value,
-        correo: modalCorreo.value
-    }
-    usuarioDatos.push(user)
-
     //  MENSAJE DE TOASTIFY
 
     Toastify({
@@ -186,7 +161,6 @@ modalComprar.onclick = () =>{
         
         }).showToast();
 }
-
 linkRecibo.onclick = () =>{
     dcModal.classList.remove('open-dcmodal')
     reciboContainer.classList.add('open-recibo')

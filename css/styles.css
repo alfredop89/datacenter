@@ -186,7 +186,7 @@ h4{
     cursor: pointer;
 }
 #modaltitulo{
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in-out;
     
 }
 .link-recibo{
@@ -230,9 +230,6 @@ h4{
     border-radius: 50%;
     height: 250px;
     border: 5px solid white !important;
-}
-.profilepic:hover{
-    padding: 5px;
 }
 
 
