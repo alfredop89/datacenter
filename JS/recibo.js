@@ -25,6 +25,10 @@ divRecibo.innerHTML = `
             `
 reciboContainer.appendChild(divRecibo)
 
+reciboContainer.onclick = () =>{
+    reciboContainer.classList.remove('open-recibo')
+}
+
 const cerrarRecibo = document.getElementById('cerrar-recibo')
 cerrarRecibo.onclick = () => {
     reciboContainer.classList.remove('open-recibo')

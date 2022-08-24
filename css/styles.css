@@ -8,6 +8,7 @@ body{
 
 
 .modal-oferta{
+    position: relative;
     background-color: rgba(0, 0, 0, 0.678);
     position: fixed;
     z-index: 100;
@@ -16,21 +17,51 @@ body{
     width: 100%;
     inset:  0;
     transition: all 0.3s ease-in-out;
-}
-.oferta{
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.269);
-    
-}
-.oferta-icon{
-    color: green;
-    font-size: 80px;
-}
-.open-oferta{
     visibility: hidden;
     opacity: 0;
 }
+.oferta{
+    position: absolute;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.269);
+    transition: .8s all ease-in-out;
+ 
+}
+.oferta-icon{
+    color: green;
+    font-size: 120px;
+    animation-name: icon;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes icon {
+    0%{
+        transform: rotateY(100deg);
+    }
+    100%{
+        transform: rotateY(-20deg);
+    }
+    50%{
+        transform: rotateY(-100deg);
+    }
+    75%{
+        transform: rotateY(10deg);
+    }
+    100%{
+        transform: rotateY(100deg);
+    }
+    
+    
+    
+}
+.open-oferta{
+    visibility: visible;
+    opacity: 1;
+}
+
+  
 
 
 
@@ -228,6 +259,12 @@ h4{
 .open-recibo{
     opacity: 1;
     visibility: visible;
+}
+.campo-vacio{
+    border: 1px solid red;
+}
+.campo-lleno{
+    border: 1px solid green;
 }
 
 

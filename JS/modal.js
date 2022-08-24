@@ -111,7 +111,7 @@ modalComprar.onclick = () =>{
     const arrayInputs = [...inputs]
     let index = 0
     for(index = 0; index <4; index++){
-    arrayInputs[index].textContent <= 3 ? modalTitulo.innerText = "Datos inválidos" : modalTitulo.innerText = 'Gracias por tu compra'
+    arrayInputs[index].textContent <= 3 ? modalTitulo.innerText = "Datos inválidos" : modalTitulo.innerText = modalNombre + 'Gracias por tu compra'
     
         if( modalNombre.value === "" || modalAPellido.value === "" || modalCorreo.value === "" || modalTdc.value === ""){
             modalTitulo.innerText = "No puedes dejar campos vacíos"
