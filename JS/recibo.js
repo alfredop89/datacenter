@@ -10,14 +10,14 @@ divRecibo.innerHTML = `
                     <h5 class="p-0 text-center my-3">Gracias por tu compra</h5>
                 </div>
                 <hr>
-                <div class="mb-4 row p-3">
+                <div class="mb-4 row aling-items-center text-start p-3">
                     <label class="mr-2" id="reciboNombre" > </label>
                     <label class="mr-2" id="reciboApellido" > </label>
                     <label class="mr-2" id="reciboCorreo" > </label>
                     <label class="mr-2" id="reciboTdc" > </label>
                     <label class="mr-2" id="reciboFactura" > </label>
                     <label class="mb-4" id="reciboPlan" > </label>
-                    <label class="mb-4" id="reciboPrecio" > </label>
+                    <label class="mb-4 text-center" id="reciboPrecio" > </label>
                     <label class="mb-4" id="reciboFecha" > </label>
                 <div class="text-center">
                 <button class="w-auto" id="cerrar-recibo" >Cerrar</button>

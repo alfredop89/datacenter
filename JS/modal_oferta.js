@@ -23,6 +23,6 @@ const mostrarOferta = () =>{
     }
     setTimeout(()=>{
         modalOferta.classList.add('open-oferta')
-    }, 4000)
+    }, 5000)
 }
 mostrarOferta()

@@ -71,19 +71,19 @@ modal.addEventListener("click", (e) =>{
 const arrayComprar = [...abrirModal]
 
     arrayComprar[0].onclick = () =>{
-        tipoPlan.innerText = 'plan básico'
+        tipoPlan.innerText = 'Plan básico'
         dcModal.classList.add('open-dcmodal')
         localStorage.setItem('tipoPlan', 'PLAN BÁSICO')
         localStorage.setItem('precio', '15')
     }
     arrayComprar[1].onclick = () =>{
-        tipoPlan.innerText = 'plan negocios'
+        tipoPlan.innerText = 'Plan negocios'
         dcModal.classList.add('open-dcmodal')
         localStorage.setItem('tipoPlan', 'PLAN NEGOCIOS')
         localStorage.setItem('precio', '35')
     }
     arrayComprar[2].onclick = () =>{
-        tipoPlan.innerText = 'plan empresas'
+        tipoPlan.innerText = 'Plan empresas'
         dcModal.classList.add('open-dcmodal')
         localStorage.setItem('tipoPlan', 'PLAN EMPRESAS')
         localStorage.setItem('precio', '45')
