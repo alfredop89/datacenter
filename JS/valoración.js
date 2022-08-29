@@ -7,6 +7,9 @@ window.addEventListener("scroll", () => {
     if(window.scrollY <= 800){
         valContainer.classList.remove('open-valbtn')
     }
+    else if(window.scrollY >= 5550){
+        valBtn.classList.remove('open-valbtn')
+    }
 })
 
 window.onclick = () =>{
@@ -47,7 +50,7 @@ const arrayIcons = [icon1, icon2, icon3, icon4].forEach((e) =>{
     }
 
 })
-
+console.log(window.scrollY)
 
 
 

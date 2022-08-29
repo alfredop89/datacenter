@@ -406,7 +406,7 @@ footer, a{
     color: white;
     padding: 15px;
     border-radius: 50%;
-    margin: 20px;
+    margin: 10px;
     transition: 0.5s all ease-in-out;
     opacity: 0;
     visibility: hidden;
