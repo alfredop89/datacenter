@@ -394,6 +394,72 @@ footer, a{
 } 
 
 
+/* VALORACIÓN */
+
+.val-btn{
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    background-color: green;
+    width: auto;
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    margin: 20px;
+    transition: 0.5s all ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+
+}
+.val-container{
+    z-index: 20;
+    position: fixed;
+    bottom: 8%;
+    right: 0;
+    position: fixed;
+    background-color: green;
+    margin: 20px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.571);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all ease-in-out;
+}
+.val-icon{
+    font-size: 30px;
+    color: white;
+}
+.val-icon-red{
+    color: red;
+}
+.val-icon1:hover{
+    color: red;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+.val-icon2:hover{
+    color: pink;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+.val-icon3:hover{
+    color: yellow;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+.val-icon4:hover{
+    color: rgb(0, 219, 0);
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+
+.open-valbtn{
+    opacity: 1;
+    visibility: visible;
+}
 
 
 
