@@ -416,7 +416,7 @@ footer, a{
     bottom: 0;
     right: 0;
     position: fixed;
-    background-color: green;
+    background-color: rgb(42, 42, 92);
     width: auto;
     font-size: 30px;
     color: white;
@@ -436,7 +436,7 @@ footer, a{
     bottom: 8%;
     right: 0;
     position: fixed;
-    background-color: green;
+    background-color: rgb(27, 27, 68);
     margin: 20px;
     border-radius: 8px;
     padding: 10px;

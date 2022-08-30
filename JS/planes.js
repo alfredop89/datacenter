@@ -72,7 +72,7 @@ planPro.forEach((pro)=>{
         <button id="cardbutton-pro" class="dc-banner-button text-dark">Comprar</button>
         <br>
         <h6>${pro.almacenamiento}</h6>
-        <h6>${pro.precio}>
+        <h6>${pro.precio}
         <h6>${pro.velocidad}</h6>
         <h6 class="mb-4">${pro.respaldo}</h6>
     `
