@@ -9,7 +9,7 @@ const mostrarOferta = () =>{
                     <h3 class="mb-4">Aprovecha las ofertas que te ofrece Datacenter</h3>
                     <hr style="color: rgba(0, 0, 0, 0.405);">
                     <i class="oferta-icon fa-solid fa-bag-shopping my-4"></i>
-                    <p>Desde 15$ ( + I.V.A) podrás empezar a disfrutar de nuestros servicios con la mejor calidad y atención para todo lo que necesites!</p>
+                    <p id="oferta-parrafo">Desde 15$ ( + I.V.A) podrás empezar a disfrutar de nuestros servicios con la mejor calidad y atención para todo lo que necesites!</p>
                     <hr style="color: rgba(0, 0, 0, 0.405);">
 
                 `

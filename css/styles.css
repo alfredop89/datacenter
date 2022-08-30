@@ -36,6 +36,10 @@ body{
     animation-iteration-count: infinite;
     
 }
+#oferta-parrafo{
+    font-weight: 400;
+    font-size: 20px;
+}
 @keyframes icon {
     0%{
         transform: rotateY(100deg);
