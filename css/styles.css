@@ -504,6 +504,14 @@ footer, a{
     .serverpng{
         display: none;
     }
+    #modaltitulo{
+        font-size: 15px;
+        
+    }
+    .dc-modal-png{
+        display: none;
+    }
+    
 
 }
 .menubar{

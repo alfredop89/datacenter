@@ -43,7 +43,7 @@ const arrayIcons = [icon1, icon2, icon3, icon4].forEach((e) =>{
             },
             gravity: "bottom",
             position: 'center',
-            text: 'Gracias por valorarnos',
+            text: 'Gracias por tu valoración',
             duration: 6000
             
             }).showToast();
