@@ -13,7 +13,7 @@ div.innerHTML =`
                         <img class="dc-modal-png" src="./assets/img/dcgray.png" alt="">
                     </div>
                     <h5 id="modaltitulo" class="p-0 text-center my-3">Ingresa tus datos para realizar la compra</h5>
-                    <p id="tipoPlan" class="tipoPlan text-center "><strong> </strong></p>
+                    <p id="tipoPlan" class="tipoPlan text-center "></p>
                     <hr>
                     <p class="p-0 m-0">Nombre</p>
                     <input id="modalnombre" class="entradas mb-4" type="text" required>
@@ -27,7 +27,7 @@ div.innerHTML =`
                     <button class="modalbutton mt-4" id="modalbutton" type="submit">Comprar</button>
                     <div class="d-flex column justify-content-between">
                     <a id="close-modal" class="text-dark">Cerrar ventana</a>
-                    <a id="linkRecibo" class="text-dark link-recibo">Ver factura</a>
+                    <a id="linkRecibo" class="text-light link-recibo">Ver factura</a>
                     </div>
                 </form>
                 `
