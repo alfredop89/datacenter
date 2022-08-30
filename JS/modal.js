@@ -13,7 +13,7 @@ div.innerHTML =`
                         <img class="dc-modal-png" src="./assets/img/dcgray.png" alt="">
                     </div>
                     <h5 id="modaltitulo" class="p-0 text-center my-3">Ingresa tus datos para realizar la compra</h5>
-                    <p id="tipoPlan" class="tipoPlan text-center"> </p>
+                    <p id="tipoPlan" class="tipoPlan text-center "><strong> </strong></p>
                     <hr>
                     <p class="p-0 m-0">Nombre</p>
                     <input id="modalnombre" class="entradas mb-4" type="text" required>
