@@ -37,7 +37,7 @@ body{
     
 }
 #oferta-parrafo{
-    font-weight: 400;
+    font-weight: 200;
     font-size: 20px;
 }
 @keyframes icon {
@@ -282,6 +282,10 @@ h4{
 
 
 /* BLOQUE DOS */
+
+#preciosIva{
+    font-weight: 400;
+}
 
 #serviciostitle{
     color: rgb(27, 27, 68);

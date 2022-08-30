@@ -52,7 +52,7 @@ listaPlanes.forEach((planes)=>{
         <button id="cardbutton" class="dc-banner-button">Comprar</button>
         <br>
         <h6>${planes.almacenamiento}</h6>
-        <h6>${planes.usuario}</h5>
+        <h6>${planes.precio}</h5>
         <h6>${planes.velocidad}</h6>
         <h6 class="mb-4">${planes.respaldo}</h6>
     `
@@ -72,7 +72,7 @@ planPro.forEach((pro)=>{
         <button id="cardbutton-pro" class="dc-banner-button text-dark">Comprar</button>
         <br>
         <h6>${pro.almacenamiento}</h6>
-        <h6>${pro.usuario}>
+        <h6>${pro.precio}>
         <h6>${pro.velocidad}</h6>
         <h6 class="mb-4">${pro.respaldo}</h6>
     `
