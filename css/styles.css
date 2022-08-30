@@ -427,6 +427,7 @@ footer, a{
     opacity: 0;
     visibility: hidden;
     cursor: pointer;
+    z-index: 20;
 
 }
 .val-container{
