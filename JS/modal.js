@@ -142,7 +142,7 @@ modalComprar.onclick = () =>{
 
     const planFactura = document.getElementById('reciboPlan').innerText = 'Tipo de plan: ' + localStorage.getItem('tipoPlan')
 
-    const precioFactura = document.getElementById('reciboPrecio').innerText = 'Precio: ' + localStorage.getItem('precio') + '$' + ' + I.V.A. - TOTAL : ' + localStorage.getItem('precio')* 1.25 + '$'
+    const precioFactura = document.getElementById('reciboPrecio').innerText = 'Precio: ' + localStorage.getItem('precio') + '$' + ' + I.V.A. (1.25%) TOTAL : ' + localStorage.getItem('precio')* 1.25 + '$'
 
     const fechaFactura = document.getElementById('reciboFecha').innerText = 'Fecha de la compra: ' + new Date().toString()
 
