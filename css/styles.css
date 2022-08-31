@@ -479,6 +479,24 @@ footer, a{
 }
 
 
+/* COMENTARIOS */
+
+.comentarios{
+    border: 2px solid rgba(0, 0, 0, 0.104);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.269);
+}
+.icon-comment{
+    color: green;
+    font-size: 60px;
+}
+.icon-arrows{
+    color: rgb(42, 42, 92);
+    font-size: 40px;
+}
+
+
 
 
 /* MEDIA QUERIES */
