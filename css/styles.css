@@ -481,7 +481,12 @@ footer, a{
 
 /* COMENTARIOS */
 
+
+.comentarios-container{
+    background-color: rgb(27, 27, 68);
+}
 .comentarios{
+    background-color: white;
     border: 2px solid rgba(0, 0, 0, 0.104);
     border-radius: 8px;
     padding: 20px;
@@ -492,7 +497,7 @@ footer, a{
     font-size: 60px;
 }
 .icon-arrows{
-    color: rgb(42, 42, 92);
+    color: green;
     font-size: 40px;
 }
 
