@@ -536,6 +536,9 @@ footer, a{
     .dc-modal-png{
         display: none;
     }
+    .comentarios{
+        height: 480px;
+    }
     
 
 }
