@@ -44,7 +44,7 @@ const tipoPlan = document.querySelector('.tipoPlan')
 
 abrirModalPro.onclick = (planes) =>{
     dcModal.classList.add('open-dcmodal')
-    tipoPlan.innerText = 'plan PRO'
+    tipoPlan.innerText = 'Plan PRO'
     localStorage.setItem('tipoPlan', 'PLAN PRO')
     localStorage.setItem('precio', '60')
 }
