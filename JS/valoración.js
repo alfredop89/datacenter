@@ -50,7 +50,6 @@ const arrayIcons = [icon1, icon2, icon3, icon4].forEach((e) =>{
     }
 
 })
-console.log(window.scrollY)
 
 
 

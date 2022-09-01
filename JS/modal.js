@@ -130,6 +130,8 @@ modalComprar.onclick = () =>{
     }
     //  IMPRIMIENDO FACTURA
 
+    
+
     const cerrarRecibo = document.getElementById('cerrar-recibo')
 
     const nombreFactura = document.getElementById('reciboNombre').innerText = 'Nombre: ' + localStorage.getItem('nombre')
@@ -142,11 +144,14 @@ modalComprar.onclick = () =>{
 
     const planFactura = document.getElementById('reciboPlan').innerText = 'Tipo de plan: ' + localStorage.getItem('tipoPlan')
 
-    const precioFactura = document.getElementById('reciboPrecio').innerText = 'Precio: ' + localStorage.getItem('precio') + '$' + ' + I.V.A. (1.25%) TOTAL : ' + localStorage.getItem('precio')* 1.25 + '$'
+
+    let iva = localStorage.getItem('precio') * 21 / 100
+
+    const precioFactura = document.getElementById('reciboPrecio').innerText = 'Precio: ' + localStorage.getItem('precio') + '$' + ' + I.V.A. (21%) TOTAL :  ' + (parseFloat(localStorage.getItem('precio')) + parseFloat(iva)) + '$'
 
     const fechaFactura = document.getElementById('reciboFecha').innerText = 'Fecha de la compra: ' + new Date().toString()
 
-
++ 
     //  MENSAJE DE TOASTIFY
 
     Toastify({
