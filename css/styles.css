@@ -516,10 +516,10 @@ footer, a{
     font-size: 40px;
     cursor: pointer;
 }
-#parrafo-comentario{
+/* #parrafo-comentario{
     opacity: 0;
     visibility: hidden;
-}
+} */
 .open-parrafo{
     visibility: visible;
     opacity: 1;

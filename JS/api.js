@@ -1,6 +1,7 @@
 const mostrarComentarios = (idCliente) => {
 
     const comentarios = document.querySelector('#comentarios')
+    const parrafo = document.querySelector('#parrafo-comentario')
     const sig = document.querySelector('#sig')
     const ant = document.querySelector('#ant')
     
@@ -8,7 +9,7 @@ const mostrarComentarios = (idCliente) => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${idCliente}`).then((response) => response.json())
     .then((comment) => {
 
-      const parrafo = document.querySelector('#parrafo-comentario')
+ 
       comentarios.innerHTML = `
                               <i class="icon-comment mb-4 fa-solid fa-comment"></i>
                               <p>${comment.title}</p><hr style="color: rgba(0, 0, 0, 0.405);">
@@ -22,7 +23,6 @@ const mostrarComentarios = (idCliente) => {
   sig.onclick = () => {
     id++
     mostrarComentarios(id)
-    parrafo.classList.add('open-parrafo')
 
   }
   ant.onclick = () => {
