@@ -130,28 +130,21 @@ modalComprar.onclick = () =>{
     }
     //  IMPRIMIENDO FACTURA
 
-    
 
+    let iva = localStorage.getItem('precio') * 21 / 100
     const cerrarRecibo = document.getElementById('cerrar-recibo')
 
     const nombreFactura = document.getElementById('reciboNombre').innerText = 'Nombre: ' + localStorage.getItem('nombre')
-
     const apellidoFactura = document.getElementById('reciboApellido').innerText = 'Apellido: ' + localStorage.getItem('apellido')
-
     const correoFactura = document.getElementById('reciboCorreo').innerText = 'E-mail: ' + localStorage.getItem('correo')
-
     const tdcFactura = document.getElementById('reciboTdc').innerText = 'TDC: ' + localStorage.getItem('tdc')
-
     const planFactura = document.getElementById('reciboPlan').innerText = 'Tipo de plan: ' + localStorage.getItem('tipoPlan')
 
-
-    let iva = localStorage.getItem('precio') * 21 / 100
-
+    
     const precioFactura = document.getElementById('reciboPrecio').innerText = 'Precio: ' + localStorage.getItem('precio') + '$' + ' + I.V.A. (21%) TOTAL :  ' + (parseFloat(localStorage.getItem('precio')) + parseFloat(iva)) + '$'
 
     const fechaFactura = document.getElementById('reciboFecha').innerText = 'Fecha de la compra: ' + new Date().toString()
-
-+ 
+    
     //  MENSAJE DE TOASTIFY
 
     Toastify({
@@ -165,7 +158,10 @@ modalComprar.onclick = () =>{
         
         }).showToast();
 }
-linkRecibo.onclick = () =>{
-    dcModal.classList.remove('open-dcmodal')
-    reciboContainer.classList.add('open-recibo')
-}
+
+
+
+    linkRecibo.onclick = () =>{
+        dcModal.classList.remove('open-dcmodal')
+        reciboContainer.classList.add('open-recibo')
+    }

@@ -11,11 +11,11 @@ divRecibo.innerHTML = `
                 </div>
                 <hr>
                 <div class="mb-4 row aling-items-center text-start p-3">
-                    <label class="mr-2" id="reciboNombre" > </label>
-                    <label class="mr-2" id="reciboApellido" > </label>
-                    <label class="mr-2" id="reciboCorreo" > </label>
-                    <label class="mr-2" id="reciboTdc" > </label>
-                    <label class="mr-2" id="reciboFactura" > </label>
+                    <label class="mr-4" id="reciboNombre" > </label>
+                    <label class="mr-4" id="reciboApellido" > </label>
+                    <label class="mr-4" id="reciboCorreo" > </label>
+                    <label class="mr-4" id="reciboTdc" > </label>
+                    <label class="mr-4" id="reciboFactura" > </label>
                     <label class="mb-4" id="reciboPlan" > </label>
                     <label class="mb-4 text-center" id="reciboPrecio" > </label>
                     <label class="mb-4" id="reciboFecha" > </label>
@@ -27,6 +27,10 @@ divRecibo.innerHTML = `
             </div>
             `
 reciboContainer.appendChild(divRecibo)
+
+divRecibo.onclick = (e) =>{
+    e.stopPropagation()
+}
 
 reciboContainer.onclick = () =>{
     reciboContainer.classList.remove('open-recibo')
