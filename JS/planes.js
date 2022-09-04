@@ -78,12 +78,3 @@ planPro.forEach((pro)=>{
     `
     planesContainer.appendChild(div)
 })
-
-
-
-
-
-
-
-
-

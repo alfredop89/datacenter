@@ -18,17 +18,24 @@ const mostrarComentarios = (idCliente) => {
     })
   }
   
+  const slide = document.querySelector('.comentarios')
   let id = 1
   
   sig.onclick = () => {
     id++
     mostrarComentarios(id)
+    slide.classList.add('comentario-sig')
+
+
 
   }
   ant.onclick = () => {
     if(id === 1 ) {return}
     id--
     mostrarComentarios(id)
+    slide.classList.replace('comentario-sig', 'comentario-ant')
+
+
   }
   
   mostrarComentarios(id)

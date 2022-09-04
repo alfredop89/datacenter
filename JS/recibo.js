@@ -19,7 +19,6 @@ divRecibo.innerHTML = `
                     <label class="mb-4" id="reciboPlan" > </label>
                     <label class="mb-4 text-center" id="reciboPrecio" > </label>
                     <label class="mb-4" id="reciboFecha" > </label>
-
                 </div>   
                 <div class="text-center">
                     <button class="w-auto" id="cerrar-recibo" >Cerrar</button>

@@ -172,7 +172,9 @@ h4{
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.269);
     transition: ease 0.5s all;
+
 }
+
 .plancard:hover{
     background-color: rgb(27, 27, 68);
     color: white;
@@ -505,8 +507,40 @@ footer, a{
     border-radius: 8px;
     padding: 20px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.269);
-    height: 280px;
+    height: auto;
 }
+
+
+
+
+
+.comentario-sig{
+    animation-name: comentario;
+    animation-duration:1s;
+
+}
+@keyframes comentario {
+    0%{
+        transform: translateX(-800px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.comentario-ant{
+    animation-name: comentario-ant;
+    animation-duration:1s;
+}
+@keyframes comentario-ant {
+    0%{
+        transform: translateX(800px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+
 .icon-comment{
     color: green;
     font-size: 60px;
@@ -558,10 +592,6 @@ footer, a{
     .dc-modal-png{
         display: none;
     }
-    .comentarios{
-        height: 480px;
-    }
-    
 
 }
 .menubar{
