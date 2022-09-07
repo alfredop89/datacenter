@@ -511,36 +511,6 @@ footer, a{
 }
 
 
-
-
-
-.comentario-sig{
-    animation-name: comentario;
-    animation-duration:1s;
-
-}
-@keyframes comentario {
-    0%{
-        transform: translateX(-800px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
-.comentario-ant{
-    animation-name: comentario-ant;
-    animation-duration:1s;
-}
-@keyframes comentario-ant {
-    0%{
-        transform: translateX(800px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
-
-
 .icon-comment{
     color: green;
     font-size: 60px;

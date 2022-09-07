@@ -5,11 +5,9 @@ const mostrarComentarios = (idCliente) => {
     const sig = document.querySelector('#sig')
     const ant = document.querySelector('#ant')
     
-  
     fetch(`https://jsonplaceholder.typicode.com/posts/${idCliente}`).then((response) => response.json())
     .then((comment) => {
 
- 
       comentarios.innerHTML = `
                               <i class="icon-comment mb-4 fa-solid fa-comment"></i>
                               <p>${comment.title}</p><hr style="color: rgba(0, 0, 0, 0.405);">
@@ -24,18 +22,11 @@ const mostrarComentarios = (idCliente) => {
   sig.onclick = () => {
     id++
     mostrarComentarios(id)
-    slide.classList.add('comentario-sig')
-
-
-
   }
   ant.onclick = () => {
     if(id === 1 ) {return}
     id--
     mostrarComentarios(id)
-    slide.classList.replace('comentario-sig', 'comentario-ant')
-
-
   }
   
   mostrarComentarios(id)
