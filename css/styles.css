@@ -393,6 +393,10 @@ footer, a{
     color: white;
     font-size: 30px;
 }
+#footer-redes:hover{
+    color: green;
+    cursor: pointer;
+}
 .dc-footer{
     height: 40px;
     width: 100px;
