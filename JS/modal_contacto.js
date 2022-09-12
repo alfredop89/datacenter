@@ -19,19 +19,10 @@ send.onclick = () =>{
         contacttitulo.innerText = "No puedes dejar campos vacíos"
         return
     }
-    // else if(contactNombre.value ===""){
-    //     const contacttitulo = document.querySelector("#contacttitulo")
-    //     contacttitulo.innerText = "Datos inválidos"
-    //     return
-    // }
     else if (!validaciones){
         contacttitulo.innerText = "Correo electrónico inválido"
         return
     }
-    // else if(textArea.value ===""){
-    //     contacttitulo.innerText = "No puedes enviar un mensaje vacío"
-    //     return
-    // }
     else{
         contacttitulo.innerText = contactNombre.value + "," + " tu mensaje ha sido enviado. Gracias por contactarnos"
     }

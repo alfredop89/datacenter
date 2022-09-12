@@ -18,7 +18,7 @@ divRecibo.innerHTML = `
                     <label class="mr-4" id="reciboFactura" > </label>
                     <label class="mb-4" id="reciboPlan" > </label>
                     <label class="mb-4 text-center" id="reciboPrecio" > </label>
-                    <label class="mb-4" id="reciboFecha" > </label>
+                    <label class="mb-4 text-center" id="reciboFecha" > </label>
                 </div>   
                 <div class="text-center">
                     <button class="w-auto" id="cerrar-recibo" >Cerrar</button>

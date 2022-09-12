@@ -293,18 +293,19 @@ h4{
     font-size: 25px;
 }
 .modal-check{
-    color: green;
+    color: rgba(128, 128, 128, 0.587);
     font-size: 35px;
     margin-bottom: 15px;
-    opacity: 0;
-    visibility: hidden;
+
+
+}
+.modal-check-open{
+    color: green;
+    opacity: 1;
+    visibility: visible;
     animation-name: icon;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
-}
-.modal-check-open{
-    opacity: 1;
-    visibility: visible;
 }
 
 
