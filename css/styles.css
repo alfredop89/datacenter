@@ -292,7 +292,20 @@ h4{
     font-weight: 500;
     font-size: 25px;
 }
-
+.modal-check{
+    color: green;
+    font-size: 35px;
+    margin-bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: icon;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+.modal-check-open{
+    opacity: 1;
+    visibility: visible;
+}
 
 
 

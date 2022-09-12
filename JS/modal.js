@@ -16,15 +16,16 @@ div.innerHTML =`
                         <p id="tipoPlan" class="tipoPlan text-center "></p>
                         <hr>
                         <p class="p-0 m-0">Nombre</p>
-                        <input id="modalnombre" class="entradas mb-4" type="text" required>
+                        <input id="modalnombre" class="entradas mb-4" type="text" maxlength= "20" required>
                         <p class="p-0 m-0">Apellido</p>
                         <input id="modalapellido" class="entradas mb-4" type="text" required>
                         <p class="p-0 m-0">Correo electrónico</p>
                         <input id="modalcorreo" class="entradas mb-4" type="email" required>
                         <p class="p-0 m-0">Tarjeta de crédito</p>
-                        <input id="modaltdc" class="entradas mb-4" type="text" placeholder="000-000-000000">
+                        <input id="modaltdc" class="entradas mb-4" type="text" placeholder="000-000-000000" maxlength= "12">
                         <br>
-                        <button class="modalbutton mt-2" id="modalbutton" type="submit">Comprar</button>
+                        <i id="modal-check" class="modal-check text-center fa-solid fa-circle-check"></i>
+                        <button class=" text-center modalbutton mt-2" id="modalbutton" type="submit">Comprar</button>
                     <div class="d-flex column justify-content-between align-items-center">
                         <a id="close-modal" class="text-dark">Cerrar ventana</a>
                         <a id="linkRecibo" class="text-light link-recibo">Ver factura</a>
@@ -41,6 +42,7 @@ const abrirModalPro = document.getElementById('cardbutton-pro')
 const cerrarModal = document.getElementById('close-modal')
 const linkRecibo = document.getElementById('linkRecibo')
 const tipoPlan = document.querySelector('.tipoPlan')
+let modalCheck = document.getElementById('modal-check')
 
 abrirModalPro.onclick = (planes) =>{
     dcModal.classList.add('open-dcmodal')
@@ -106,9 +108,15 @@ inputs.forEach((e) => {
     }
 })
 
+
+
 modalComprar.onclick = () =>{
-    
+
+
     const arrayInputs = [...inputs]
+    let expresiones = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
+    let validacion = expresiones.test(modalCorreo.value)
+
     let index = 0
     for(index = 0; index <4; index++){
     arrayInputs[index].textContent <= 3 ? modalTitulo.innerText = "Datos inválidos" : modalTitulo.innerText = modalNombre + 'Gracias por tu compra'
@@ -117,9 +125,15 @@ modalComprar.onclick = () =>{
             modalTitulo.innerText = "No puedes dejar campos vacíos"
             return
         }
+        else if (!validacion){
+            modalTitulo.innerText = 'Correo electrónico inválido'
+            return
+        }
         else{
             modalTitulo.innerText = modalNombre.value + ", " + "gracias por tu compra!"
             linkRecibo.classList.add('open-recibo')
+
+            modalCheck.classList.add('modal-check-open')
             
             localStorage.setItem('nombre',modalNombre.value)
             localStorage.setItem('apellido',modalAPellido.value)
@@ -128,6 +142,9 @@ modalComprar.onclick = () =>{
         }
 
     }
+
+    
+
     //  IMPRIMIENDO FACTURA
 
 
@@ -157,10 +174,9 @@ modalComprar.onclick = () =>{
         
         }).showToast();
 }
-
-
-
     linkRecibo.onclick = () =>{
         dcModal.classList.remove('open-dcmodal')
         reciboContainer.classList.add('open-recibo')
+        modalCheck.classList.remove('modal-check-open')
+
     }
