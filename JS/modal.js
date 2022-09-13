@@ -12,20 +12,20 @@ div.innerHTML =`
                     <div class="d-flex justify-content-center align-items-center mb-2">
                         <img class="dc-modal-png" src="./assets/img/dcgray.png" alt="">
                     </div>
-                        <h5 id="modaltitulo" class="p-0 text-center my-3">Ingresa tus datos para realizar la compra</h5>
+                        <h5 id="modalTitulo" class="p-0 text-center my-3">Ingresa tus datos para realizar la compra</h5>
                         <p id="tipoPlan" class="tipoPlan text-center "></p>
                         <hr>
                         <p class="p-0 m-0">Nombre</p>
-                        <input id="modalnombre" class="entradas mb-4" type="text" maxlength= "20" required>
+                        <input id="modalNombre" class="entradas mb-4" type="text" maxlength= "20" required>
                         <p class="p-0 m-0">Apellido</p>
-                        <input id="modalapellido" class="entradas mb-4" type="text" required>
+                        <input id="modalApellido" class="entradas mb-4" type="text" required>
                         <p class="p-0 m-0">Correo electrónico</p>
-                        <input id="modalcorreo" class="entradas mb-4" type="email" required>
+                        <input id="modalCorreo" class="entradas mb-4" type="email" required>
                         <p class="p-0 m-0">Tarjeta de crédito</p>
-                        <input id="modaltdc" class="entradas mb-4" type="text" placeholder="000-000-000000" maxlength= "12">
+                        <input id="modalTdc" class="entradas mb-4" type="text" placeholder="000-000-000000" maxlength= "12">
                         <br>
                         <i id="modal-check" class="modal-check text-center fa-solid fa-circle-check"></i>
-                        <button class=" text-center modalbutton mt-2" id="modalbutton" type="submit">Comprar</button>
+                        <button class=" text-center modalbutton mt-2" id="modalButton" type="submit">Comprar</button>
                     <div class="d-flex column justify-content-between align-items-center">
                         <a id="close-modal" class="text-dark">Cerrar ventana</a>
                         <a id="linkRecibo" class="text-light link-recibo">Ver factura</a>
@@ -94,12 +94,12 @@ const arrayComprar = [...abrirModal]
 
 // // MODAL FORM
 
-const modalNombre = document.getElementById('modalnombre')
-const modalAPellido = document.getElementById('modalapellido')
-const modalCorreo = document.getElementById('modalcorreo')
-const modalTdc = document.getElementById('modaltdc')
-const modalTitulo = document.getElementById('modaltitulo')
-const modalComprar = document.getElementById('modalbutton')
+const modalNombre = document.getElementById('modalNombre')
+const modalAPellido = document.getElementById('modalApellido')
+const modalCorreo = document.getElementById('modalCorreo')
+const modalTdc = document.getElementById('modalTdc')
+const modalTitulo = document.getElementById('modalTitulo')
+const modalComprar = document.getElementById('modalButton')
 const inputs = document.querySelectorAll('.entradas')
 
 inputs.forEach((e) => {
@@ -108,21 +108,23 @@ inputs.forEach((e) => {
     }
 })
 
-
-
 modalComprar.onclick = () =>{
 
-
     const arrayInputs = [...inputs]
-    let expresiones = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
+    let expresiones = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     let validacion = expresiones.test(modalCorreo.value)
+    let tdcLength = modalTdc.value.length
 
     let index = 0
     for(index = 0; index <4; index++){
     arrayInputs[index].textContent <= 3 ? modalTitulo.innerText = "Datos inválidos" : modalTitulo.innerText = modalNombre + 'Gracias por tu compra'
     
-        if( modalNombre.value === "" || modalAPellido.value === "" || modalCorreo.value === "" || modalTdc.value === ""){
+        if( modalNombre.value === "" || modalAPellido.value === "" || modalCorreo.value === ""){
             modalTitulo.innerText = "No puedes dejar campos vacíos"
+            return
+        }
+        else if(tdcLength < 12){
+            modalTitulo.innerText = 'El número de tu TDC debe ser de 12 dígitos'
             return
         }
         else if (!validacion){
@@ -139,11 +141,12 @@ modalComprar.onclick = () =>{
             localStorage.setItem('apellido',modalAPellido.value)
             localStorage.setItem('correo',modalCorreo.value)
             localStorage.setItem('tdc',modalTdc.value)
+
+            modalComprar.disabled = true
+            modalComprar.classList.add('modalbutton-disabled')
         }
 
     }
-
-    
 
     //  IMPRIMIENDO FACTURA
 
@@ -174,9 +177,11 @@ modalComprar.onclick = () =>{
         
         }).showToast();
 }
-    linkRecibo.onclick = () =>{
-        dcModal.classList.remove('open-dcmodal')
-        reciboContainer.classList.add('open-recibo')
-        modalCheck.classList.remove('modal-check-open')
-
-    }
+    
+linkRecibo.onclick = () =>{
+    dcModal.classList.remove('open-dcmodal')
+    reciboContainer.classList.add('open-recibo')
+    modalCheck.classList.remove('modal-check-open')
+    modalComprar.disabled = false
+    modalComprar.classList.remove('modalbutton-disabled')
+}
