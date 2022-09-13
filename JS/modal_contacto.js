@@ -10,11 +10,14 @@ const contactEmail = document.querySelector("#contactemail")
 const send = document.querySelector(".contactenviar")
 const textArea = document.querySelector("#textarea")
 
-let expresion = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
+
+const arrayContactInputs = [contactNombre, contactEmail, textArea].forEach((e) => {e.onclick = () =>{contacttitulo.innerText = "Ingresa tus datos para enviar tu mensaje"}})
+
+let expresion = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 let validaciones = expresion.test(contactEmail.value)
 
 send.onclick = () =>{
-    if(contactNombre.value, contactEmail.value < 3 || contactNombre.value ==="" || textArea.value ===""){
+    if(contactNombre.value, contactEmail.value === "" || contactNombre.value ==="" || textArea.value ===""){
         const contacttitulo = document.querySelector("#contacttitulo")
         contacttitulo.innerText = "No puedes dejar campos vacíos"
         return
